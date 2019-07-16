@@ -1,4 +1,6 @@
 package ca.jrvs.apps.model.domain;
 
-public class Entity {
+public interface Entity<ID> {
+    ID getId();
+    void setID(ID id);
 }
