@@ -16,7 +16,7 @@ import org.apache.commons.lang.builder.ToStringBuilder;
         "lastPrice",
         "ticker"
 })
-public class Quote {
+public class Quote  {
 
     @JsonProperty("askPrice")
     private Integer askPrice;

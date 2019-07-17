@@ -1,4 +1,5 @@
 package ca.jrvs.apps.model.domain;
 
-public class OrderStatus {
+public enum OrderStatus {
+    FILLED, CANCELED, PENDING
 }

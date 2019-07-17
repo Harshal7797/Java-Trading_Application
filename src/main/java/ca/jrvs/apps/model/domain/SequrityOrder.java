@@ -7,7 +7,7 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "accountId",l
+        "accountId",
         "id",
         "notes",
         "price",
@@ -28,7 +28,7 @@ public class SequrityOrder {
     @JsonProperty("size")
     private Integer size;
     @JsonProperty("status")
-    private String status;
+    private OrderStatus status;
     @JsonProperty("ticker")
     private String ticker;
 
@@ -83,12 +83,12 @@ public class SequrityOrder {
     }
 
     @JsonProperty("status")
-    public String getStatus() {
+    public OrderStatus getStatus() {
         return status;
     }
 
     @JsonProperty("status")
-    public void setStatus(String status) {
+    public void setStatus(OrderStatus status) {
         this.status = status;
     }
 
