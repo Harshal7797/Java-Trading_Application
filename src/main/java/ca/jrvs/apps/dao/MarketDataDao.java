@@ -108,6 +108,8 @@ public class MarketDataDao {
                 .setConnectionManagerShared(true)
                 .build();
     }
+
+    //Move it to UNit test
     public static void main(String[] args) {
         PoolingHttpClientConnectionManager cm = new PoolingHttpClientConnectionManager();
         cm.setMaxTotal(100);
