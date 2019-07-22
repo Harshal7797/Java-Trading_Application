@@ -3,11 +3,15 @@ package ca.jrvs.apps.controller;
 import ca.jrvs.apps.dao.MarketDataDao;
 import ca.jrvs.apps.dao.QuoteDao;
 import ca.jrvs.apps.model.domain.IexQuote;
+import ca.jrvs.apps.model.domain.Quote;
 import ca.jrvs.apps.service.QuoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Collections;
+import java.util.List;
 
 
 @Controller
@@ -33,10 +37,40 @@ public class QuoteController {
             throw ResponseExceptionUtil.getResponseStatusException(e);
         }
     }
+    @PutMapping(path = "/")
+    @ResponseStatus(HttpStatus.OK)
+    public void putQuote(@RequestBody Quote quote){
+        try {
+            quoteDao.update(Collections.singletonList(quote));
+        }catch (Exception e){
+            throw ResponseExceptionUtil.getResponseStatusException(e);
+        }
+    }
 
-@GetMapping(path = "/iex/ticker/{ticker}")
-@ResponseStatus(HttpStatus.OK)
-@ResponseBody
+    @PostMapping(path ="/tickerId/{tickerId}")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void createQuote(@PathVariable String tickerId){
+        try{
+            quoteService.initQuote(tickerId);
+        }catch (Exception e){
+            throw ResponseExceptionUtil.getResponseStatusException(e);
+        }
+    }
+
+    @GetMapping(path = "/dailyList")
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody
+    public List<Quote> getDailtList(){
+        try {
+            return quoteDao.findAll();
+        }catch (Exception e){
+            throw ResponseExceptionUtil.getResponseStatusException(e);
+        }
+    }
+
+    @GetMapping(path = "/iex/ticker/{ticker}")
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody
     public IexQuote getQuote(@PathVariable String ticker) {
         try {
             return marketDataDao.findIexQuoteByTicker(ticker);
