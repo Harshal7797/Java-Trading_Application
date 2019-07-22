@@ -30,7 +30,7 @@ public class QuoteController {
         try {
             quoteService.updateMarketData();
         } catch (Exception e) {
-            throw ResponseExceptionUtil.getResponlseStatusException(e);
+            throw ResponseExceptionUtil.getResponseStatusException(e);
         }
     }
 

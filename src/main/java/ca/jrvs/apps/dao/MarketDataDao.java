@@ -8,7 +8,6 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.conn.HttpClientConnectionManager;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 import org.slf4j.Logger;
@@ -109,16 +108,5 @@ public class MarketDataDao {
                 .build();
     }
 
-    //Move it to UNit test
-    public static void main(String[] args) {
-        PoolingHttpClientConnectionManager cm = new PoolingHttpClientConnectionManager();
-        cm.setMaxTotal(100);
-        cm.setDefaultMaxPerRoute(50);
-        List<String> testi = new ArrayList<>();
-        testi.add("AAPL");
-        testi.add("MSFT");
-        MarketDataDao test =new MarketDataDao(cm);
-        test.findIexQuoteByTicker("aapl");
-        // test.findIexQuoteByTicker(testi);
-    }
+
 }
