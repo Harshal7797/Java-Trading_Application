@@ -16,7 +16,7 @@ import org.apache.commons.lang.builder.ToStringBuilder;
         "lastPrice",
         "ticker"
 })
-public class Quote  {
+public class Quote implements Entity<String> {
 
     @JsonProperty("askPrice")
     private Integer askPrice;
@@ -77,6 +77,7 @@ public class Quote  {
     public String getId() {
         return id;
     }
+
 
     @JsonProperty("id")
     public void setId(String id) {

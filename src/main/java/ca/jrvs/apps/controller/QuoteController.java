@@ -60,7 +60,7 @@ public class QuoteController {
     @GetMapping(path = "/dailyList")
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
-    public List<Quote> getDailtList(){
+    public List<Quote> getDailyList(){
         try {
             return quoteDao.findAll();
         }catch (Exception e){

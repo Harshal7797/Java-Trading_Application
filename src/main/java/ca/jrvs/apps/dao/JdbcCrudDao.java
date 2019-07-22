@@ -59,10 +59,10 @@ public abstract class JdbcCrudDao <E extends Entity, ID> implements CrudReposito
 
     @Override
     public void deleteById(ID id){
-         deletebyId(getIdName(),id);
+         deleteById(getIdName(),id);
     }
 
-    public void deletebyId(String idName , ID id){
+    public void deleteById(String idName , ID id){
 
     }
 
