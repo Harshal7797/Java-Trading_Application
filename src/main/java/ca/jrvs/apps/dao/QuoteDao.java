@@ -6,7 +6,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 
@@ -33,8 +32,9 @@ public class QuoteDao extends JdbcCrudDao<Quote, String> {
 
 
     public void update(List<Quote> singletonList) {
-        String update = "UPDATE quote SET last_price=?, bid_price=?, bid_size=?, ask_price=?, ask_size=? WHERE ticker=?";
-
+        String update = "UPDATE " + getTableName() + " SET last_price=?, bid_price=?, bid_size=?, ask_price=?, " +
+                "ask_size=? WHERE " + getIdName() + " =?";
+        logger.info(update);
         for(Quote x: singletonList){
             getJdbcTemplate().update(update,x.getLastPrice(),x.getBidPrice(),x.getBidSize(),
                     x.getAskPrice(),x.getAskSize(),x.getTicker());
@@ -43,7 +43,8 @@ public class QuoteDao extends JdbcCrudDao<Quote, String> {
     }
 
     public List<Quote> findAll() {
-    String selectSql= "SELECT"+ getIdName() +"FROM"+ getTableName();
+    String selectSql= "SELECT "+ getIdName() +" FROM "+ getTableName();
+    logger.info(selectSql);
     List<Quote> quotes = jdbcTemplate.query(selectSql, BeanPropertyRowMapper.newInstance(Quote.class));
     return quotes;
     }
@@ -54,7 +55,7 @@ public class QuoteDao extends JdbcCrudDao<Quote, String> {
     }
 
     @Override
-    public SimpleJdbcInsert simpleJdbcInsert() {
+    public SimpleJdbcInsert getSimpleJdbcInsert() {
         return simpleInsert;
     }
 
@@ -80,8 +81,7 @@ public class QuoteDao extends JdbcCrudDao<Quote, String> {
 
     @Override
     public Quote save(Quote entity) {
-        simpleInsert.execute(new BeanPropertySqlParameterSource(entity));
-        return entity;
+        return super.save(entity);
     }
 
     @Override
