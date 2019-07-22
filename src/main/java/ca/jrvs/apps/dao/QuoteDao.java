@@ -9,5 +9,6 @@ public class QuoteDao {
     }
 
     public List<Quote> findAll() {
+        return null;
     }
 }
