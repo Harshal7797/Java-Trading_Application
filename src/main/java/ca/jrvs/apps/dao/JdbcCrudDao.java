@@ -49,6 +49,9 @@ public abstract class JdbcCrudDao <E extends Entity, ID> implements CrudReposito
  */
     @SuppressWarnings("unchecked")
     public E findById(String idName, ID id, boolean forUpdate, Class clazz){
+        if (id == null){
+            throw new IllegalArgumentException("ID can't be null");
+        }
         E tmp = null;
         String selectSql = "SELECT * FROM " + getTableName() +" WHERE " + getIdName() + " =?";
         logger.info(selectSql);
@@ -91,8 +94,7 @@ public abstract class JdbcCrudDao <E extends Entity, ID> implements CrudReposito
         }
         String deleteSql = "DELETE FROM " + getTableName() + " WHERE " + idName + " =?";
         logger.info(deleteSql);
-        getJdbcTemplate().update(deleteSql,id);
-
+        getJdbcTemplate().update(deleteSql, id);
     }
 
 

@@ -21,15 +21,11 @@ public class QuoteDao extends JdbcCrudDao<Quote, String> {
     private JdbcTemplate jdbcTemplate;
     private SimpleJdbcInsert simpleInsert;
 
-
     @Autowired
     public QuoteDao(DataSource dataSource){
         this.jdbcTemplate = new JdbcTemplate(dataSource);
         this.simpleInsert = new SimpleJdbcInsert(dataSource).withTableName(TABLE_NAME);
     }
-
-
-
 
     public void update(List<Quote> singletonList) {
         String update = "UPDATE " + getTableName() + " SET last_price=?, bid_price=?, bid_size=?, ask_price=?, " +
