@@ -1,6 +1,7 @@
 package ca.jrvs.apps.trading;
 
 import ca.jrvs.apps.model.config.MarketDataConfig;
+import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.http.conn.HttpClientConnectionManager;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.slf4j.Logger;
@@ -17,7 +18,9 @@ import javax.activation.DataSource;
 @EnableTransactionManagement
 public class AppConfig {
     private Logger logger = LoggerFactory.getLogger(AppConfig.class);
-
+    private static final String JDBC_URL = "jdbc:postgresql://localhost:5432/jrvstrading_test";
+    private static final String DB_USER = "postgres";
+    private static final String DB_PASSWORD = "password";
     @Value("${iex.host}")
     private String iex_host;
 
@@ -33,7 +36,12 @@ public class AppConfig {
 
     @Bean
     public DataSource dataSource(){
-        return null;
+        System.out.println("Creating apacheDataSource");
+        BasicDataSource basicDataSource = new BasicDataSource();
+        basicDataSource.setUrl(JDBC_URL);
+        basicDataSource.setUsername(DB_USER);
+        basicDataSource.setPassword(DB_PASSWORD);
+        return (DataSource) basicDataSource;
     }
 
     //http://bit.ly/2tWTmzQ connectionPool

@@ -15,7 +15,7 @@ import org.apache.commons.lang.builder.ToStringBuilder;
         "status",
         "ticker"
 })
-public class SequrityOrder {
+public class SequrityOrder implements Entity<Integer> {
 
     @JsonProperty("accountId")
     private Integer accountId;

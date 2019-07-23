@@ -11,7 +11,7 @@ import org.apache.commons.lang.builder.ToStringBuilder;
         "id",
         "traderId"
 })
-public class Account {
+public class Account implements Entity<Integer> {
 
     @JsonProperty("amount")
     private Double amount;

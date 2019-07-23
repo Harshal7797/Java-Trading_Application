@@ -26,7 +26,7 @@ public class Application implements CommandLineRunner {
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(Application.class);
         app.setWebApplicationType(WebApplicationType.NONE);
-        app.run(null);
+        app.run(args);
     }
     @Override
     public void run(String... args) throws Exception {

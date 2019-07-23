@@ -14,7 +14,7 @@ import org.apache.commons.lang.builder.ToStringBuilder;
         "id",
         "lastName"
 })
-public class Trader {
+public class Trader implements Entity<Integer> {
 
     @JsonProperty("country")
     private String country;
@@ -73,6 +73,7 @@ public class Trader {
     public Integer getId() {
         return id;
     }
+
 
     @JsonProperty("id")
     public void setId(Integer id) {
