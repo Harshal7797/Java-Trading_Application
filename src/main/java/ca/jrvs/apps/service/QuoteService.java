@@ -3,9 +3,13 @@ package ca.jrvs.apps.service;
 
 import ca.jrvs.apps.dao.MarketDataDao;
 import ca.jrvs.apps.dao.QuoteDao;
+import ca.jrvs.apps.dao.ResourceNotFoundException;
 import ca.jrvs.apps.model.domain.IexQuote;
 import ca.jrvs.apps.model.domain.Quote;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -16,6 +20,7 @@ import java.util.List;
 @Service
 public class QuoteService {
 
+    private static final Logger logger= LoggerFactory.getLogger(QuoteService.class);
     private QuoteDao quoteDao;
     private MarketDataDao marketDataDao;
 
@@ -53,12 +58,23 @@ public class QuoteService {
      * @throws IllegalArgumentException for invalid input
      */
     public void initQuotes(List<String> tickers) {
+        if(tickers.isEmpty()){
+            throw new IllegalArgumentException("tickers cannot be null");
+        }
         //buildQuoteFromIexQuote helper method is used here
         List<IexQuote> iexQuotes = marketDataDao.findIexQuoteByTicker(tickers);
         List<Quote> quotes = new ArrayList<>();
-        for(IexQuote iexQuote: iexQuotes){
-            quotes.add(buildQuoteFromIexQuote(iexQuote));
-        }
+       try {
+           for (IexQuote iexQuote : iexQuotes) {
+               quotes.add(buildQuoteFromIexQuote(iexQuote));
+           }
+       }catch (EmptyResultDataAccessException e){
+           logger.debug("Unable to retrieve data",e);
+       }
+
+        if(quotes.isEmpty()){
+            throw new ResourceNotFoundException("Resource not found");
+    }
         quoteDao.update(quotes);
     }
 

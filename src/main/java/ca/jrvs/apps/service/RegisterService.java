@@ -2,6 +2,7 @@ package ca.jrvs.apps.service;
 
 import ca.jrvs.apps.dao.*;
 import ca.jrvs.apps.model.domain.Account;
+import ca.jrvs.apps.model.domain.Position;
 import ca.jrvs.apps.model.domain.Trader;
 import ca.jrvs.apps.model.view.TraderAccountView;
 import org.slf4j.Logger;
@@ -9,6 +10,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class RegisterService {
@@ -50,6 +53,7 @@ public class RegisterService {
         TraderAccountView traderAccountView = new TraderAccountView();
         Account account = new Account();
         account.setAmount(0.0);
+        account.setTraderId(trader.getId());
         try {
             account.setTraderId(trader.getId());
         }catch (DataAccessException e){
@@ -64,7 +68,7 @@ public class RegisterService {
     }
 
     /**
-     * A trader can be deleted if no open position and no cache balance
+     * A trader can be deleted if no open position and no cash balance
      * -validate traderID
      * -get trader account by traderId and check account balance
      * -get positions by accountiD and check positions
@@ -77,6 +81,27 @@ public class RegisterService {
      */
     public void deleteTraderById(Integer traderID){
 
+        Account account = accountDao.findById(traderID);
 
+        if (traderID == null){
+            throw new IllegalArgumentException("traderID cannot be null");
+        }
+        List<Position> positions = positionDao.findById(account.getId());
+
+        try{
+        for(Position position : positions) {
+            if (account.getAmount() == 0.0 && position.getPosition() == 0) {
+                securityOrderDao.deleteById(account.getId());
+             }
+            }
+
+        }catch (DataAccessException e){
+            logger.debug("Unable to Delete Trader", e);
+        }
+            accountDao.deleteById(account.getId());
+            traderDao.deleteById(traderID);
+            if(account != null){
+                throw new ResourceNotFoundException("Resource not deleted");
+            }
     }
 }
