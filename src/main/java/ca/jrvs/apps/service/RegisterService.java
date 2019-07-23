@@ -8,7 +8,6 @@ import ca.jrvs.apps.model.view.TraderAccountView;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -33,8 +32,8 @@ public class RegisterService {
     /**
      * Create a new trader and initialize a new account with 0 amount.
      * -Validate user input (all fields must not be empty)
-     * -create a trader
-     * -create an account
+     * -create a trader in psql
+     * -create an account in psql
      * -create, setup and return a new traderAccountView
      *
      * @param trader trader info
@@ -46,24 +45,24 @@ public class RegisterService {
      */
 
     public TraderAccountView createTraderAccount(Trader trader){
-        if (trader == null){
-            throw new IllegalArgumentException("Trader can't be null");
+        if (trader.getId() != null){
+            throw new IllegalArgumentException("Id is not allowed as it's auto Generated");
         }
 
+        Trader trader1 = traderDao.save(trader);
         TraderAccountView traderAccountView = new TraderAccountView();
+        traderAccountView.setTrader(trader1);
+        //Validate Input
+//        if (StringUtil.isEmpty(trader.getFirstName(), trader.getLastName(), trader.getCountry(),
+//                trader.getEmail()) || trader.getDob() == null) {
+//            throw new IllegalArgumentException("Trader property cannot be null or empty");
+//        }
         Account account = new Account();
         account.setAmount(0.0);
-        account.setTraderId(trader.getId());
-        try {
-            account.setTraderId(trader.getId());
-        }catch (DataAccessException e){
-            logger.debug("Unable to Retrieve Data:" , e);
-        }
-        if(account.getId() == null){
-            throw new ResourceNotFoundException("Resource not found");
-        }
-        traderAccountView.setTrader(trader);
-        traderAccountView.setAccount(account);
+        account.setTraderId(trader1.getId());
+        traderAccountView.setAccount(accountDao.save(account));
+
+
         return traderAccountView;
     }
 
@@ -81,26 +80,27 @@ public class RegisterService {
      */
     public void deleteTraderById(Integer traderID){
 
-        Account account = accountDao.findById(traderID);
-
         if (traderID == null){
             throw new IllegalArgumentException("traderID cannot be null");
         }
-        List<Position> positions = positionDao.findById(account.getId());
 
-        try{
-        for(Position position : positions) {
-            if (account.getAmount() == 0.0 && position.getPosition() == 0) {
-                securityOrderDao.deleteById(account.getId());
-             }
-            }
+        Account account = accountDao.findById(traderID);
 
-        }catch (DataAccessException e){
-            logger.debug("Unable to Delete Trader", e);
+        if(account.getAmount() != 0){
+            throw new IllegalArgumentException("Can't delete Trader due to non-zero account amount");
         }
+        List<Position> positions = positionDao.findById(account.getId());
+        positions.forEach(position -> {
+            if(position.getPosition() != 0){
+                throw new IllegalArgumentException("Can't delete Trader due to open position");
+            }
+        });
+
+
+            securityOrderDao.deleteById(account.getId());
             accountDao.deleteById(account.getId());
             traderDao.deleteById(traderID);
-            if(account != null){
+            if(accountDao.existsById(account.getId())){
                 throw new ResourceNotFoundException("Resource not deleted");
             }
     }
