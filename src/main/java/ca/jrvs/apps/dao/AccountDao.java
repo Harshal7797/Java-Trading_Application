@@ -4,6 +4,7 @@ import ca.jrvs.apps.model.domain.Account;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.IncorrectResultSizeDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
@@ -68,6 +69,23 @@ public class AccountDao extends JdbcCrudDao<Account, Integer> {
     @Override
     public boolean existsById(Integer traderID) {
         return super.existsById(getIdName(), traderID);
+    }
+
+    /**
+     * @retrun updated account or null if id not found
+     */
+    public Account updateAmountById(Integer id, Double amount){
+        if(super.existsById(id)){
+            String sql = "UPDATE " + TABLE_NAME  +" SET ammount=? WHERE id =?" ;
+            int row = jdbcTemplate.update(sql, amount, id);
+            logger.debug("Update amount row = "+ row);
+            if(row!=1){
+                throw new IncorrectResultSizeDataAccessException(1, row);
+            }
+            return findById(id);
+        }
+
+        return null;
     }
 }
 
