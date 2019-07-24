@@ -3,7 +3,6 @@ package ca.jrvs.apps.trading;
 import ca.jrvs.apps.controller.QuoteController;
 import ca.jrvs.apps.dao.MarketDataDao;
 import ca.jrvs.apps.dao.QuoteDao;
-import ca.jrvs.apps.model.domain.Quote;
 import ca.jrvs.apps.service.QuoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -19,7 +18,7 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
         JdbcTemplateAutoConfiguration.class,
         DataSourceAutoConfiguration.class,
         HibernateJpaAutoConfiguration.class},
-        scanBasePackages = "ca.jrvs.apps.trading")
+        scanBasePackages = "ca.jrvs.apps")
 public class Application implements CommandLineRunner {
 
     private QuoteController quoteController;
@@ -38,23 +37,21 @@ public class Application implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         marketDataDao.findIexQuoteByTicker("aapl");
-        quoteController.createQuote("tsla");
-        Quote quote = new Quote();
-        quote.setAskPrice(200);
-        quote.setAskSize(3);
-        quote.setBidPrice(200);
-        quote.setLastPrice(201);
-        quote.setBidSize(4);
-        quote.setId("1000");
-        quote.setTicker("AAPL");
+//        quoteController.createQuote("tsla");
+//        Quote quote = new Quote();
+//        quote.setAskPrice(200);
+//        quote.setAskSize(3);
+//        quote.setBidPrice(200);
+//        quote.setLastPrice(201);
+//        quote.setBidSize(4);
+//        quote.setId("1000");
+//        quote.setTicker("AAPL");
 
-        quoteController.putQuote(quote);
+      //  quoteController.putQuote(quote);
     }
 
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(Application.class);
-
-
 
         //Turn off web
      app.setWebApplicationType(WebApplicationType.NONE);
