@@ -10,7 +10,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public abstract class JdbcCrudDao <E extends Entity, ID> implements CrudRepository<E,ID> {
 
     private static final Logger logger = LoggerFactory.getLogger(Quote.class);

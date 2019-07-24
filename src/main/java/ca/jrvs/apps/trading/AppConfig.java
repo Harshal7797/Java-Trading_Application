@@ -10,12 +10,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.activation.DataSource;
 
 @Configuration
-@EnableTransactionManagement
 public class AppConfig {
     private Logger logger = LoggerFactory.getLogger(AppConfig.class);
     private static final String JDBC_URL = "jdbc:postgresql://localhost:5432/jrvstrading_test";
@@ -38,6 +36,7 @@ public class AppConfig {
     public DataSource dataSource(){
         System.out.println("Creating apacheDataSource");
         BasicDataSource basicDataSource = new BasicDataSource();
+        basicDataSource.setDriverClassName("org.postgresql.Driver");
         basicDataSource.setUrl(JDBC_URL);
         basicDataSource.setUsername(DB_USER);
         basicDataSource.setPassword(DB_PASSWORD);

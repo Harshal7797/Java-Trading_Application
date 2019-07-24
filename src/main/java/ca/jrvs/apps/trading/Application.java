@@ -1,6 +1,10 @@
 package ca.jrvs.apps.trading;
 
+import ca.jrvs.apps.controller.QuoteController;
 import ca.jrvs.apps.dao.MarketDataDao;
+import ca.jrvs.apps.dao.QuoteDao;
+import ca.jrvs.apps.model.domain.Quote;
+import ca.jrvs.apps.service.QuoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -10,26 +14,50 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 
-@SpringBootApplication(exclude =
-        {JdbcTemplateAutoConfiguration.class,
-                DataSourceAutoConfiguration.class,
-                HibernateJpaAutoConfiguration.class
-        })
+
+@SpringBootApplication(exclude = {
+        JdbcTemplateAutoConfiguration.class,
+        DataSourceAutoConfiguration.class,
+        HibernateJpaAutoConfiguration.class},
+        scanBasePackages = "ca.jrvs.apps.trading")
 public class Application implements CommandLineRunner {
 
-    private MarketDataDao runner;
+    private QuoteController quoteController;
+    private QuoteService quoteService;
+    private QuoteDao quoteDao;
+    private MarketDataDao marketDataDao;
+
     @Autowired
-    public Application(MarketDataDao runner){
-     this.runner =runner;
+    public Application(QuoteController quoteController, QuoteService quoteService, QuoteDao quoteDao, MarketDataDao marketDataDao) {
+        this.quoteController = quoteController;
+        this.quoteService = quoteService;
+        this.quoteDao = quoteDao;
+        this.marketDataDao = marketDataDao;
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+        marketDataDao.findIexQuoteByTicker("aapl");
+        quoteController.createQuote("tsla");
+        Quote quote = new Quote();
+        quote.setAskPrice(200);
+        quote.setAskSize(3);
+        quote.setBidPrice(200);
+        quote.setLastPrice(201);
+        quote.setBidSize(4);
+        quote.setId("1000");
+        quote.setTicker("AAPL");
+
+        quoteController.putQuote(quote);
     }
 
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(Application.class);
-        app.setWebApplicationType(WebApplicationType.NONE);
-        app.run(args);
-    }
-    @Override
-    public void run(String... args) throws Exception {
 
+
+
+        //Turn off web
+     app.setWebApplicationType(WebApplicationType.NONE);
+        app.run(args);
     }
 }

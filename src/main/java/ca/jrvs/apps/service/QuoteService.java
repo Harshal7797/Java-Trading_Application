@@ -67,6 +67,7 @@ public class QuoteService {
        try {
            for (IexQuote iexQuote : iexQuotes) {
                quotes.add(buildQuoteFromIexQuote(iexQuote));
+
            }
        }catch (EmptyResultDataAccessException e){
            logger.debug("Unable to retrieve data",e);
