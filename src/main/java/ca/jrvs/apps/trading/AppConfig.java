@@ -8,7 +8,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 
@@ -21,10 +20,10 @@ public class AppConfig {
 //    @Value("${iex.host}")
     private String iex_host;
 
-    @Bean
-    public PlatformTransactionManager txManager(DataSource dataSource){
-        return null;
-    }
+//    @Bean
+//    public PlatformTransactionManager txManager(DataSource dataSource){
+//        return null;
+//    }
 
     @Bean
     public MarketDataConfig marketDataConfig() {

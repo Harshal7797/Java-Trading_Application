@@ -36,18 +36,7 @@ public class Application implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        marketDataDao.findIexQuoteByTicker("aapl");
-//        quoteController.createQuote("tsla");
-//        Quote quote = new Quote();
-//        quote.setAskPrice(200);
-//        quote.setAskSize(3);
-//        quote.setBidPrice(200);
-//        quote.setLastPrice(201);
-//        quote.setBidSize(4);
-//        quote.setId("1000");
-//        quote.setTicker("AAPL");
 
-      //  quoteController.putQuote(quote);
     }
 
     public static void main(String[] args) {
@@ -55,6 +44,6 @@ public class Application implements CommandLineRunner {
 
         //Turn off web
      app.setWebApplicationType(WebApplicationType.NONE);
-        app.run(args);
+        app.run();
     }
 }
