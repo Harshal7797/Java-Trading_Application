@@ -25,6 +25,7 @@ public class PositionDao {
     public PositionDao(DataSource dataSource){
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
+
     public List<Position> findById(Integer accountId){
         if (accountId == null){
             throw new IllegalArgumentException("ID can't be null");
@@ -42,6 +43,15 @@ public class PositionDao {
             throw new ResourceNotFoundException("Resource not found");
         }
         return tmp;
+    }
+    public Position findByTickerAndId(String ticker, Integer accountId ){
+        if ( ticker.isEmpty() || accountId == null){
+            throw new IllegalArgumentException("Ticker and account ID cannot be null can't be null");
+        }
+        String sql = "SELECT * FROM " + TABLE_NAME + "WHERE " + ID_NAME + " =?" + " AND ticker = ?";
+    Position position = jdbcTemplate.queryForObject(sql, BeanPropertyRowMapper.newInstance(Position.class), accountId, ticker);
+
+    return position;
     }
 
 }
