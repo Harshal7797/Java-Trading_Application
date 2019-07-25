@@ -84,7 +84,7 @@ public class OrderService {
     }
 
     private OrderStatus buyStock(Account account,Quote quote, MarketOrderDto orderDto){
-        int tobuy = abs(orderDto.getSize()) * quote.getAskPrice();
+        double tobuy = abs(orderDto.getSize()) * quote.getAskPrice();
         if(account.getAmount() >= tobuy){
             account.setAmount(account.getAmount() - tobuy);
             return FILLED;
@@ -95,7 +95,7 @@ public class OrderService {
 
     }
     private OrderStatus sellStock( Account account, Position position, Quote quote, MarketOrderDto orderDto){
-        int toSell = abs(orderDto.getSize())* quote.getAskPrice();
+        double toSell = abs(orderDto.getSize())* quote.getAskPrice();
         if (position.getPosition() > toSell){
             account.setAmount(account.getAmount() + toSell);
             return FILLED;

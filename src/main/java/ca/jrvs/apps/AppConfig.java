@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 @EnableTransactionManagement
 public class AppConfig {
     private Logger logger = LoggerFactory.getLogger(AppConfig.class);
-    private static final String JDBC_URL = "jdbc:postgresql://localhost:5432/jrvstrading_test";
+    private static final String JDBC_URL = "jdbc:postgresql://localhost:5432/jrvstrading";
     private static final String DB_USER = "postgres";
     private static final String DB_PASSWORD = "password";
 //    @Value("${iex.host}")

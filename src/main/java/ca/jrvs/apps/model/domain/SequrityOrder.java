@@ -24,7 +24,7 @@ public class SequrityOrder implements Entity<Integer> {
     @JsonProperty("notes")
     private String notes;
     @JsonProperty("price")
-    private Integer price;
+    private Double price;
     @JsonProperty("size")
     private Integer size;
     @JsonProperty("status")
@@ -63,12 +63,12 @@ public class SequrityOrder implements Entity<Integer> {
     }
 
     @JsonProperty("price")
-    public Integer getPrice() {
+    public Double getPrice() {
         return price;
     }
 
     @JsonProperty("price")
-    public void setPrice(Integer price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 

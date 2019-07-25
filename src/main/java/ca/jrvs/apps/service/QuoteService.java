@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -39,11 +39,11 @@ public class QuoteService {
      */
     public static Quote buildQuoteFromIexQuote(IexQuote iexQuote) {
         Quote quote = new Quote();
-        quote.setAskPrice(Integer.parseInt(iexQuote.getIexAskPrice()));
+        quote.setAskPrice(Double.parseDouble(iexQuote.getIexAskPrice()));
         quote.setAskSize(Integer.parseInt(iexQuote.getIexAskSize()));
-        quote.setBidPrice(Integer.parseInt(iexQuote.getIexBidPrice()));
+        quote.setBidPrice(Double.parseDouble(iexQuote.getIexBidPrice()));
         quote.setBidSize(Integer.parseInt(iexQuote.getIexBidSize()));
-        quote.setBidSize(Integer.parseInt(iexQuote.getLatestPrice()));
+        quote.setLastPrice(Double.parseDouble(iexQuote.getLatestPrice()));
         quote.setTicker(iexQuote.getSymbol());
         return quote;
     }
@@ -90,8 +90,7 @@ public class QuoteService {
      * @throws IllegalArgumentException for invalid input
      */
     public void initQuote(String ticker) {
-        List<String> myList = new ArrayList<String>(Arrays.asList(ticker.split(",")));
-        initQuotes(myList);
+        initQuotes(Collections.singletonList(ticker));
     }
 
     /**
@@ -106,6 +105,6 @@ public class QuoteService {
      * @throws IllegalArgumentException for invalid input
      */
     public void updateMarketData() {
-        quoteDao.findAll().forEach(x->initQuote(x.getTicker()));
+        quoteDao.findAll();
     }
 }
