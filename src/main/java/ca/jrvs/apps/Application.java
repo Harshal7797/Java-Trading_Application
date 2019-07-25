@@ -5,6 +5,7 @@ import ca.jrvs.apps.dao.MarketDataDao;
 import ca.jrvs.apps.dao.QuoteDao;
 import ca.jrvs.apps.service.QuoteService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,6 +21,8 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
         //scanBasePackages = "ca.jrvs.apps.trading")
 public class Application implements CommandLineRunner {
 
+    @Value("A")
+    private static String[] initDailyList;
     private QuoteController quoteController;
     private QuoteService quoteService;
     private QuoteDao quoteDao;

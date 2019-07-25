@@ -55,7 +55,7 @@ public abstract class JdbcCrudDao <E extends Entity, ID> implements CrudReposito
             throw new IllegalArgumentException("ID can't be null");
         }
         E tmp = null;
-        String selectSql = "SELECT * FROM " + getTableName() +" WHERE " + getIdName() + " =?";
+        String selectSql = "SELECT * FROM " + getTableName() +" WHERE " + getIdName() + " = ?";
         logger.info(selectSql);
 
         try {
