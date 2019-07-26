@@ -1,5 +1,6 @@
 package ca.jrvs.apps.dao;
 
+import ca.jrvs.apps.model.config.MarketDataConfig;
 import ca.jrvs.apps.model.domain.IexQuote;
 import ca.jrvs.apps.util.JsonUtil;
 import org.apache.commons.lang3.StringUtils;
@@ -32,9 +33,9 @@ public class MarketDataDao {
     private HttpClientConnectionManager httpClientConnectionManager;
 
     @Autowired
-    public MarketDataDao(HttpClientConnectionManager httpClientConnectionManager) {
+    public MarketDataDao(HttpClientConnectionManager httpClientConnectionManager, MarketDataConfig marketDataConfig) {
         this.httpClientConnectionManager = httpClientConnectionManager;
-        BATCH_QUOTE_URL = "https://cloud.iexapis.com/stable/stock/market/batch?symbols=aapl&types=quote&token=pk_3872a146e4c945f4b922051bb8a11859";
+        BATCH_QUOTE_URL = marketDataConfig.getURl()+"stock/market/batch?symbols=%s&types=quote&token="+marketDataConfig.getPublicToken();
     }
 
     /**

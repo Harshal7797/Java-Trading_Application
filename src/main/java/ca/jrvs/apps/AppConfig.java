@@ -29,7 +29,11 @@ public class AppConfig {
 
     @Bean
     public MarketDataConfig marketDataConfig() {
-        return null;
+        MarketDataConfig marketDataConfig = new MarketDataConfig();
+        marketDataConfig.setUrl("https://cloud.iexapis.com/stable/");
+        marketDataConfig.setPublicToken(System.getenv("public_token"));
+
+        return marketDataConfig;
     }
 
     @Bean
