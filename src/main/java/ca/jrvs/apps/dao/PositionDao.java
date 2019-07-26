@@ -35,7 +35,7 @@ public class PositionDao {
         logger.info(selectSql);
 
         try {
-            tmp = (List<Position>) jdbcTemplate.queryForObject(selectSql, BeanPropertyRowMapper.newInstance(Position.class),accountId);
+            tmp = (List<Position>) jdbcTemplate.query(selectSql, BeanPropertyRowMapper.newInstance(Position.class),accountId);
         }catch (EmptyResultDataAccessException e){
             logger.debug("Can't find trader id:" + accountId, e);
         }

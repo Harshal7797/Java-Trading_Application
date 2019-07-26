@@ -76,7 +76,7 @@ public class AccountDao extends JdbcCrudDao<Account, Integer> {
      */
     public Account updateAmountById(Integer id, Double amount){
         if(super.existsById(id)){
-            String sql = "UPDATE " + TABLE_NAME  +" SET ammount=? WHERE id =?" ;
+            String sql = "UPDATE " + TABLE_NAME  +" SET amount=? WHERE id =?" ;
             int row = jdbcTemplate.update(sql, amount, id);
             logger.debug("Update amount row = "+ row);
             if(row!=1){

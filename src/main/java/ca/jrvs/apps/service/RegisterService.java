@@ -89,16 +89,17 @@ public class RegisterService {
         if(account.getAmount() != 0){
             throw new IllegalArgumentException("Can't delete Trader due to non-zero account amount");
         }
-        List<Position> positions = positionDao.findById(account.getId());
+        List<Position> positions = positionDao.findById(traderID);
         positions.forEach(position -> {
             if(position.getPosition() != 0){
                 throw new IllegalArgumentException("Can't delete Trader due to open position");
             }
+            else{
+                securityOrderDao.deleteById(traderID);
+            }
         });
 
-
-            securityOrderDao.deleteById(account.getId());
-            accountDao.deleteById(account.getId());
+            accountDao.deleteById(account.getTraderId());
             traderDao.deleteById(traderID);
             if(accountDao.existsById(account.getId())){
                 throw new ResourceNotFoundException("Resource not deleted");
