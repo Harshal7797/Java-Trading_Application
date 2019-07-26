@@ -60,30 +60,30 @@ public class QuoteService {
      * @throws IllegalArgumentException for invalid input
      */
     public void initQuotes(List<String> tickers) {
-        if(tickers.isEmpty()){
+        if (tickers.isEmpty()) {
             throw new IllegalArgumentException("tickers cannot be null");
         }
         //buildQuoteFromIexQuote helper method is used here
         List<IexQuote> iexQuotes = marketDataDao.findIexQuoteByTicker(tickers);
         List<Quote> quotes = new ArrayList<>();
-       try {
-           for (IexQuote iexQuote : iexQuotes) {
-               quotes.add(buildQuoteFromIexQuote(iexQuote));
-               quoteDao.save(buildQuoteFromIexQuote(iexQuote));
+        try {
+            for (IexQuote iexQuote : iexQuotes) {
+                quotes.add(buildQuoteFromIexQuote(iexQuote));
+                quoteDao.save(buildQuoteFromIexQuote(iexQuote));
 
+            }
+        } catch (EmptyResultDataAccessException e) {
+            logger.debug("Unable to retrieve data", e);
+        }
 
-           }
-       }catch (EmptyResultDataAccessException e){
-           logger.debug("Unable to retrieve data",e);
-       }
-
-        if(quotes.isEmpty()){
+        if (quotes.isEmpty()) {
             throw new ResourceNotFoundException("Resource not found");
-    }
+        }
+
 
         quoteDao.update(quotes);
-    }
 
+    }
     /**
      * Add a new ticker to the quote table. Skip existing ticker.
      *
@@ -108,6 +108,8 @@ public class QuoteService {
      * @throws IllegalArgumentException for invalid input
      */
     public void updateMarketData() {
-        quoteDao.findAll();
+        List<Quote> quotes= quoteDao.findAll();
+        List<String> tickers = quoteDao.getAllTickers(quotes);
+      // initQuotes(tickers);
     }
 }
