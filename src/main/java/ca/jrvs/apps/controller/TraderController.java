@@ -1,7 +1,8 @@
 package ca.jrvs.apps.controller;
 
-import ca.jrvs.apps.dao.TraderDao;
+import ca.jrvs.apps.model.domain.Account;
 import ca.jrvs.apps.model.domain.Trader;
+import ca.jrvs.apps.service.FundTransferService;
 import ca.jrvs.apps.service.RegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,13 +15,13 @@ import java.time.LocalDate;
 @RequestMapping("/trader")
 public class TraderController {
 
-    TraderDao traderDao;
+    FundTransferService fundTransferService;
     RegisterService registerService;
 
     @Autowired
-    public TraderController(TraderDao traderDao, RegisterService registerService){
-        this.traderDao = traderDao;
+    public TraderController(RegisterService registerService, FundTransferService fundTransferService){
         this.registerService = registerService;
+        this.fundTransferService = fundTransferService;
     }
 
 
@@ -29,7 +30,7 @@ public class TraderController {
     @ResponseBody
     public void deleteTrader(@PathVariable Integer traderid){
         try {
-             traderDao.deleteById(traderid);
+             registerService.deleteTraderById(traderid);
         }catch (Exception e){
             throw ResponseExceptionUtil.getResponseStatusException(e);
         }
@@ -38,7 +39,7 @@ public class TraderController {
     @PostMapping (path =  "/")
     @ResponseStatus (HttpStatus.CREATED)
     @ResponseBody
-    public void createTraderAndAccount(@RequestBody Trader trader){
+    public void TraderAndAccountView(@RequestBody Trader trader){
         try{
             registerService.createTraderAccount(trader);
         }catch (Exception e){
@@ -48,17 +49,41 @@ public class TraderController {
    @PostMapping (path = "/firstname/{firstname}/lastname/{lastname}/dob/{dob}/country/{country}/email/{email}")
     @ResponseStatus(HttpStatus.CREATED)
     @ResponseBody
-    public void createTrader(@PathVariable String firstname, String lastname, LocalDate dob, String country, String email){
+    public void createTrader(@PathVariable("firstname") String firstname, @PathVariable("lastname") String lastname,
+                             @PathVariable("dob") LocalDate dob, @PathVariable("country") String country,
+                             @PathVariable("email")String email){
     Trader trader = new Trader();
     trader.setCountry(country);
     trader.setDob(dob);
     trader.setFirstName(firstname);
     trader.setLastName(lastname);
     trader.setEmail(email);
-    traderDao.save(trader);
-
+    try {
+        registerService.createTraderAccount(trader);
+    }catch (Exception e){
+        throw ResponseExceptionUtil.getResponseStatusException(e);
+    }
    }
 
+   @PutMapping(path = "/trader/deposit/traderId/{traderId}/amount/{amount}")
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody
+    public Account depositToAccount(@PathVariable("traderId") Integer traderId, @PathVariable("amount") Double amount){
+        try{
+            return fundTransferService.deposit(traderId,amount);
+        }catch (Exception e){
+            throw ResponseExceptionUtil.getResponseStatusException(e);
+        }
+   }
 
-
+   @PutMapping(path ="/trader/withdraw/traderId/{traderId}/amount/{amount}")
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody
+    public Account withdrawFromAccount(@PathVariable("traderId") Integer traderId, @PathVariable("amount") Double amount){
+        try{
+            return fundTransferService.withdraw(traderId, amount);
+        }catch (Exception e){
+            throw ResponseExceptionUtil.getResponseStatusException(e);
+        }
+   }
 }
