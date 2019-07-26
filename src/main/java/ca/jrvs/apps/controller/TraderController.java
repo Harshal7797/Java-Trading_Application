@@ -28,9 +28,9 @@ public class TraderController {
     @DeleteMapping (path = "/traderId/{traderId}")
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
-    public void deleteTrader(@PathVariable Integer traderid){
+    public void deleteTrader(@PathVariable Integer traderId){
         try {
-             registerService.deleteTraderById(traderid);
+             registerService.deleteTraderById(traderId);
         }catch (Exception e){
             throw ResponseExceptionUtil.getResponseStatusException(e);
         }

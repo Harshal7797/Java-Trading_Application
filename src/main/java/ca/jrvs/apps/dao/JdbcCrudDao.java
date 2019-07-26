@@ -31,7 +31,8 @@ public abstract class JdbcCrudDao <E extends Entity, ID> implements CrudReposito
     @Override
     public E save(E entity) {
         SqlParameterSource parameterSource = new BeanPropertySqlParameterSource(entity);
-        Number newID = getSimpleJdbcInsert().executeAndReturnKey(parameterSource);
+        Number newId = getSimpleJdbcInsert().executeAndReturnKey(parameterSource);
+        entity.setId(newId.intValue());
         return entity;
     }
 

@@ -69,6 +69,8 @@ public class QuoteService {
        try {
            for (IexQuote iexQuote : iexQuotes) {
                quotes.add(buildQuoteFromIexQuote(iexQuote));
+               quoteDao.save(buildQuoteFromIexQuote(iexQuote));
+
 
            }
        }catch (EmptyResultDataAccessException e){
@@ -78,6 +80,7 @@ public class QuoteService {
         if(quotes.isEmpty()){
             throw new ResourceNotFoundException("Resource not found");
     }
+
         quoteDao.update(quotes);
     }
 

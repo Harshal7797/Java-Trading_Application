@@ -6,11 +6,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Repository
 public class QuoteDao extends JdbcCrudDao<Quote, String> {
@@ -77,7 +79,8 @@ public class QuoteDao extends JdbcCrudDao<Quote, String> {
 
     @Override
     public Quote save(Quote entity) {
-        return super.save(entity);
+        simpleInsert.execute(new BeanPropertySqlParameterSource(entity));
+        return entity;
     }
 
     @Override
@@ -87,5 +90,8 @@ public class QuoteDao extends JdbcCrudDao<Quote, String> {
     @Override
     public boolean existsById(String id) {
         return super.existsById(getIdName(), id);
+    }
+    public List<String> getAllTickers(List<Quote> quotes){
+        return quotes.stream().map(Quote::getTicker).collect(Collectors.toList());
     }
 }

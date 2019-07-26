@@ -17,7 +17,7 @@ import java.util.List;
 public class PositionDao {
     private static final Logger logger= LoggerFactory.getLogger(Quote.class);
 
-    private final String TABLE_NAME = "trader";
+    private final String TABLE_NAME = "position";
     private final String ID_NAME = "account_id";
 
     private JdbcTemplate jdbcTemplate;
