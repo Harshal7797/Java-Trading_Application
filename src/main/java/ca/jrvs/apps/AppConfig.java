@@ -22,10 +22,6 @@ public class AppConfig {
 //    @Value("${iex.host}")
     private String iex_host;
 
-//    @Bean
-//    public PlatformTransactionManager txManager(DataSource dataSource){
-//        return null;
-//    }
 
     @Bean
     public MarketDataConfig marketDataConfig() {
@@ -44,7 +40,7 @@ public class AppConfig {
         basicDataSource.setUrl(JDBC_URL);
         basicDataSource.setUsername(DB_USER);
         basicDataSource.setPassword(DB_PASSWORD);
-        return (DataSource) basicDataSource;
+        return  basicDataSource;
     }
 
     //http://bit.ly/2tWTmzQ connectionPool

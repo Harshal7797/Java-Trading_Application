@@ -23,7 +23,7 @@ public class QuoteDao extends JdbcCrudDao<Quote, String> {
     private SimpleJdbcInsert simpleInsert;
 
     @Autowired
-    public QuoteDao(DataSource dataSource){
+    public QuoteDao(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
         this.simpleInsert = new SimpleJdbcInsert(dataSource).withTableName(TABLE_NAME);
     }

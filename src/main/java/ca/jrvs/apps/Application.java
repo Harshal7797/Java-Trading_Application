@@ -19,8 +19,6 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
         HibernateJpaAutoConfiguration.class})
 public class Application implements CommandLineRunner {
 
-
-    //private static String[] initDailyList;
     private QuoteController quoteController;
     private QuoteService quoteService;
     private QuoteDao quoteDao;

@@ -77,8 +77,8 @@ public class OrderService {
         else{
             sequrityOrder.setStatus(sellStock(account, position,quote,orderDto));
         }
-
         securityOrderDao.save(sequrityOrder);
+
 
         return sequrityOrder;
     }

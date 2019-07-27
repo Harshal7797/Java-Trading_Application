@@ -6,10 +6,7 @@ import ca.jrvs.apps.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/order")
@@ -21,10 +18,10 @@ public class OrderController {
         this.orderService = orderService;
     }
 
-    @PutMapping(path = "/marketOrder")
+    @PostMapping(path = "/marketOrder")
     @ResponseStatus(HttpStatus.CREATED)
     @ResponseBody
-    public SequrityOrder makeMarketOrder(MarketOrderDto marketOrderDto){
+    public SequrityOrder makeMarketOrder(@RequestBody MarketOrderDto marketOrderDto){
      try{
          return orderService.executeMarketOrder(marketOrderDto);
      }catch (Exception e){

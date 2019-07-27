@@ -70,6 +70,10 @@ public class QuoteService {
         try {
             for (IexQuote iexQuote : iexQuotes) {
                 quotes.add(buildQuoteFromIexQuote(iexQuote));
+                if (!tickers.contains(buildQuoteFromIexQuote(iexQuote).getTicker())) {
+                    quoteDao.save(buildQuoteFromIexQuote(iexQuote));
+                }
+
             }
         } catch (EmptyResultDataAccessException e) {
             logger.debug("Unable to retrieve data", e);
@@ -78,16 +82,7 @@ public class QuoteService {
         if (quotes.isEmpty()) {
             throw new ResourceNotFoundException("Resource not found");
         }
-
-        quotes.forEach(x->{
-            if (!tickers.contains(x.getTicker())) {
-                quoteDao.save(x);
-            }});
-
-
-
         quoteDao.update(quotes);
-
     }
     /**
      * Add a new ticker to the quote table. Skip existing ticker.
