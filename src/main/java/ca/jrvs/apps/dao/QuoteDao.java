@@ -41,7 +41,7 @@ public class QuoteDao extends JdbcCrudDao<Quote, String> {
     }
 
     public List<Quote> findAll() {
-    String selectSql= "SELECT "+ getIdName() +" FROM "+ getTableName();
+    String selectSql= "SELECT *" +" FROM "+ getTableName();
     logger.info(selectSql);
     List<Quote> quotes = jdbcTemplate.query(selectSql, BeanPropertyRowMapper.newInstance(Quote.class));
     return quotes;
