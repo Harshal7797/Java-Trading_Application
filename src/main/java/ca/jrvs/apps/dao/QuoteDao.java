@@ -12,7 +12,6 @@ import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Repository
 public class QuoteDao extends JdbcCrudDao<Quote, String> {
@@ -91,7 +90,6 @@ public class QuoteDao extends JdbcCrudDao<Quote, String> {
     public boolean existsById(String id) {
         return super.existsById(getIdName(), id);
     }
-    public List<String> getAllTickers(List<Quote> quotes){
-        return quotes.stream().map(Quote::getTicker).collect(Collectors.toList());
-    }
+
+
 }

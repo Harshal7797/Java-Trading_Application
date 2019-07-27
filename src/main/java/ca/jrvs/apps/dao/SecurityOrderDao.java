@@ -24,6 +24,7 @@ public class SecurityOrderDao extends JdbcCrudDao<SequrityOrder,Integer> {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
         this.simpleInsert = new SimpleJdbcInsert(dataSource).withTableName(TABLE_NAME).usingGeneratedKeyColumns(ID_NAME);
     }
+
     @Override
     public JdbcTemplate getJdbcTemplate() {
         return jdbcTemplate;
@@ -48,9 +49,10 @@ public class SecurityOrderDao extends JdbcCrudDao<SequrityOrder,Integer> {
     Class getEntityClass() {
         return SequrityOrder.class;
     }
+
     @Override
     public SequrityOrder findById(Integer id) {
-        return super.findById(getIdName(),id,false, getEntityClass());
+        return super.findById(getIdName(), id, false, getEntityClass());
     }
 
     @Override
@@ -60,11 +62,13 @@ public class SecurityOrderDao extends JdbcCrudDao<SequrityOrder,Integer> {
 
     @Override
     public void deleteById(Integer id) {
-        super.deleteById(getIdName(),id);
+        super.deleteById(getIdName(), id);
     }
 
     @Override
     public boolean existsById(Integer id) {
         return super.existsById(getIdName(), id);
     }
+
+
 }

@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -69,8 +70,6 @@ public class QuoteService {
         try {
             for (IexQuote iexQuote : iexQuotes) {
                 quotes.add(buildQuoteFromIexQuote(iexQuote));
-                quoteDao.save(buildQuoteFromIexQuote(iexQuote));
-
             }
         } catch (EmptyResultDataAccessException e) {
             logger.debug("Unable to retrieve data", e);
@@ -79,6 +78,12 @@ public class QuoteService {
         if (quotes.isEmpty()) {
             throw new ResourceNotFoundException("Resource not found");
         }
+
+        quotes.forEach(x->{
+            if (!tickers.contains(x.getTicker())) {
+                quoteDao.save(x);
+            }});
+
 
 
         quoteDao.update(quotes);
@@ -109,7 +114,7 @@ public class QuoteService {
      */
     public void updateMarketData() {
         List<Quote> quotes= quoteDao.findAll();
-        List<String> tickers = quoteDao.getAllTickers(quotes);
-      // initQuotes(tickers);
+        initQuotes(quotes.stream().map(Quote::getTicker).collect(Collectors.toList()));
+
     }
 }
