@@ -28,6 +28,7 @@ public class QuoteDao extends JdbcCrudDao<Quote, String> {
         this.simpleInsert = new SimpleJdbcInsert(dataSource).withTableName(TABLE_NAME);
     }
 
+
     public void update(List<Quote> singletonList) {
         String update = "UPDATE " + getTableName() + " SET last_price=?, bid_price=?, bid_size=?, ask_price=?, " +
                 "ask_size=? WHERE " + getIdName() + " =?";
