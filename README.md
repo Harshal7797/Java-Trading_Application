@@ -20,7 +20,7 @@
   
 # REST API Usage  
 ## Swagger  
-Swagger is an open-source software framework backed by a large ecosystem of tools that helps developers design,
+Swagger is an open-source software framework backed by a large ecosystem of tools that helps developers design, build, document, and consume RESTful Web services.
 What's swagger (1-2 sentences, you can copy from swagger docs). Why are we using it or who will benefit from it?  
 ## Quote Controller  
 - High-level description for this controller. Where is market data coming from (IEX) and how did you cache the quote data (PSQL). Briefly talk about data from within your app  
@@ -50,7 +50,7 @@ What's swagger (1-2 sentences, you can copy from swagger docs). Why are we using
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzczNTAzNjcsLTMwNTgyMjAzMiwxNz
-gwMjk4OTE0LDIwNDQwODQxLC0xOTAxMjI4OTg3LC01MDIwMDM4
-NF19
+eyJoaXN0b3J5IjpbODUwNjYzOTUwLC0zMDU4MjIwMzIsMTc4MD
+I5ODkxNCwyMDQ0MDg0MSwtMTkwMTIyODk4NywtNTAyMDAzODRd
+fQ==
 -->
