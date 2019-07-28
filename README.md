@@ -42,7 +42,7 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
 ## Order Controller  
 Order Controller is used to buy/sell stock from user defined company such as `AAPL`, `MSFT` etc.  
 - There is only one endpoint which   
-  - POST `/order/marketOrder`:  MarketOrder is a Jexplain what is a market order, and how does your business logic work.   
+  - POST `/order/marketOrder`:  MarketOrder is a `JSON POGO` that contains `accountId, size and ticker`. AccountId is from the user buying/selling the stock and Size is how much he/she wants to buy and ticker is company 
 ## Dashboard Controller
 This controller is designed to check if the Spring Booth is running or not and has only one endpoints.
 - GET `/health` to make sure SpringBoot app is up and running  
@@ -60,9 +60,9 @@ This controller is designed to check if the Spring Booth is running or not and h
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTgyNTIzMDcsLTExNjE5MTE3Niw2MD
-EwMzc2MTgsLTE5OTY0MDMxOTAsLTE4OTQ2Njk3NjQsLTEwMzg5
-NjUyOTYsLTE4MzU2NzIwNzAsODUwNjYzOTUwLC0zMDU4MjIwMz
-IsMTc4MDI5ODkxNCwyMDQ0MDg0MSwtMTkwMTIyODk4NywtNTAy
-MDAzODRdfQ==
+eyJoaXN0b3J5IjpbODg0NTgyMTExLC0xMTYxOTExNzYsNjAxMD
+M3NjE4LC0xOTk2NDAzMTkwLC0xODk0NjY5NzY0LC0xMDM4OTY1
+Mjk2LC0xODM1NjcyMDcwLDg1MDY2Mzk1MCwtMzA1ODIyMDMyLD
+E3ODAyOTg5MTQsMjA0NDA4NDEsLTE5MDEyMjg5ODcsLTUwMjAw
+Mzg0XX0=
 -->
