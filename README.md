@@ -1,4 +1,5 @@
 # Introduction  
+-
 - Briefly explain what does this project do (e.g. it an online stock trading simulation REST API which can blah..blah) and who can use this API (e.g. front-end developer, mobile developer, and traders can utilize this REST API)  
 - Briefly talk about technologies used in this project(e.g. It's a MicroService which is implemented with SpringBoot. PSQL database. IEX market data)  
   
@@ -61,11 +62,11 @@ This controller is designed to check if the Spring Booth is running or not and h
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTg4OTM2MzEsMTUxNDAxOTI0OCwxNj
-k0ODExMjQyLDkzNTkzMTU2NSwxNDk2NTcwMzI4LC0xODMxNzY0
-NzIxLC04NTg5MjUxODYsLTExNjE5MTE3Niw2MDEwMzc2MTgsLT
-E5OTY0MDMxOTAsLTE4OTQ2Njk3NjQsLTEwMzg5NjUyOTYsLTE4
-MzU2NzIwNzAsODUwNjYzOTUwLC0zMDU4MjIwMzIsMTc4MDI5OD
-kxNCwyMDQ0MDg0MSwtMTkwMTIyODk4NywtNTAyMDAzODRdfQ==
-
+eyJoaXN0b3J5IjpbLTEwODkyODgxNzQsLTE5NTg4OTM2MzEsMT
+UxNDAxOTI0OCwxNjk0ODExMjQyLDkzNTkzMTU2NSwxNDk2NTcw
+MzI4LC0xODMxNzY0NzIxLC04NTg5MjUxODYsLTExNjE5MTE3Ni
+w2MDEwMzc2MTgsLTE5OTY0MDMxOTAsLTE4OTQ2Njk3NjQsLTEw
+Mzg5NjUyOTYsLTE4MzU2NzIwNzAsODUwNjYzOTUwLC0zMDU4Mj
+IwMzIsMTc4MDI5ODkxNCwyMDQ0MDg0MSwtMTkwMTIyODk4Nywt
+NTAyMDAzODRdfQ==
 -->
