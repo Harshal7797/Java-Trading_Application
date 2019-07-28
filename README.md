@@ -28,6 +28,7 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
   - GET `/quote/dailyList`: list all securities that are available to trading in this trading system
   - GET `/quote/iex/ticker/{ticker}`: Display the IEX market data for user defined ticker
   - POST `/quote/tickerId/{tickerId}`: Add a new ticker to the dailyList (quote table)
+  - PUT `/quote/`: Update a given quote in the quote table
   - PUT `/quote/iexMarketData`: Update all quotes from IEX which is an external market data source  
 ## Trader Controller  
 - High-level description for trader controller(e.g. it can manage trader and account information. it can deposit and withdraw fund from a given account)  
@@ -52,7 +53,7 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ3MzQ5NTY3LC0xODM1NjcyMDcwLDg1MD
-Y2Mzk1MCwtMzA1ODIyMDMyLDE3ODAyOTg5MTQsMjA0NDA4NDEs
-LTE5MDEyMjg5ODcsLTUwMjAwMzg0XX0=
+eyJoaXN0b3J5IjpbLTEwMzg5NjUyOTYsLTE4MzU2NzIwNzAsOD
+UwNjYzOTUwLC0zMDU4MjIwMzIsMTc4MDI5ODkxNCwyMDQ0MDg0
+MSwtMTkwMTIyODk4NywtNTAyMDAzODRdfQ==
 -->
