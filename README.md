@@ -34,7 +34,8 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
 ## Trader Controller  
 - Trader Controller is designed to  be used to `Create`,`Update` and `DELETE` a trader and an account associated with specific user. It can also deposit and withdraw money from user account.
 - This controller also have five endpoints which are listed below with brief description:
-- 
+	- GET `/quote/dailyList`: list all securities that are available to trading in this trading system
+  - GET `/quote/iex/ticker/{ticker}`: Display the IEX market data for user defined ticker
 - briefly explain your endpoints in this controller  
 ## Order Controller  
 - High-level description for this controller.  
@@ -59,7 +60,7 @@ This controller is designed to check if the Spring Booth is running or not and h
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4NDY2NTc1NSw2MDEwMzc2MTgsLTE5OT
+eyJoaXN0b3J5IjpbMTIxNTUxOTI2Myw2MDEwMzc2MTgsLTE5OT
 Y0MDMxOTAsLTE4OTQ2Njk3NjQsLTEwMzg5NjUyOTYsLTE4MzU2
 NzIwNzAsODUwNjYzOTUwLC0zMDU4MjIwMzIsMTc4MDI5ODkxNC
 wyMDQ0MDg0MSwtMTkwMTIyODk4NywtNTAyMDAzODRdfQ==
