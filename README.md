@@ -55,13 +55,13 @@ This controller is designed to check if the Spring Booth is running or not and h
   - `Service` : 
   - `Dao` : Data Access Object which handles 
   - `SpringBoot: webservlet/TomCat and IoC`  
-  - `PSQL` - PostgrSQL, also know as postgres, is a free and open-source relational database management system`RDBMS`.
+  - `PSQL` - PostgrSQL, also know as postgres, is a free and open-source relational database management system `RDBMS`.
   - `IEX`  - Investors  Exchange is a stock exchange based in United States. For this Application we use `IEX Cloud` is a flexible financial data platform connecting a wide array of developers with curated financial data. It also offers an API service, allowing developers to query US and Canadian Stock Data. 
   
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwODc5MDE1NCwtMTgzMTc2NDcyMSwtOD
+eyJoaXN0b3J5IjpbMTQ5NjU3MDMyOCwtMTgzMTc2NDcyMSwtOD
 U4OTI1MTg2LC0xMTYxOTExNzYsNjAxMDM3NjE4LC0xOTk2NDAz
 MTkwLC0xODk0NjY5NzY0LC0xMDM4OTY1Mjk2LC0xODM1NjcyMD
 cwLDg1MDY2Mzk1MCwtMzA1ODIyMDMyLDE3ODAyOTg5MTQsMjA0
