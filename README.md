@@ -49,7 +49,9 @@ This controller is designed to check if the Spring Booth is running or not and h
 
   
 # Architecture  
-- Draw a component diagram which contains controller, service, DAO, storage layers (you can mimic the diagram from the guide)  
+- Trading Application Workflow
+
+
 - briefly explain the following logic layers or components (3-5 sentences for each)  
   - `Controller` : Parse user inputs and then calls the corresponding service method.
   - `Service` : This component is knows as Business logic. In computer software a business logic is the part of program that encodes the real-world` business rules` that determines how data can be created, stored and changed.`Business Rules` describe the operation, definitions and constraints that apply to an organization.
@@ -65,7 +67,7 @@ This controller is designed to check if the Spring Booth is running or not and h
 4.
 5.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NDIwMjYyMSwtMTA4OTI4ODE3NCwtMT
+eyJoaXN0b3J5IjpbLTc4NTUyODExOCwtMTA4OTI4ODE3NCwtMT
 k1ODg5MzYzMSwxNTE0MDE5MjQ4LDE2OTQ4MTEyNDIsOTM1OTMx
 NTY1LDE0OTY1NzAzMjgsLTE4MzE3NjQ3MjEsLTg1ODkyNTE4Ni
 wtMTE2MTkxMTc2LDYwMTAzNzYxOCwtMTk5NjQwMzE5MCwtMTg5
