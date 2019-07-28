@@ -24,7 +24,7 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
  
 ## Quote Controller  
 - Quote Controller job is to `create` ,`Read` and `Update` quote  related information which is being retrieved from IEX cloud using HTTP request and is cached into `quote` table in the database `jrvstrading`  using JDBC connection.
-- 
+
 - There are five endpoints for this controller which are listed below with brief description:
   - GET `/quote/dailyList`: list all securities that are available to trading in this trading system
   - GET `/quote/iex/ticker/{ticker}`: Display the IEX market data for user defined ticker
@@ -55,8 +55,8 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTEyNDEzNjUsLTE5OTY0MDMxOTAsLT
-E4OTQ2Njk3NjQsLTEwMzg5NjUyOTYsLTE4MzU2NzIwNzAsODUw
-NjYzOTUwLC0zMDU4MjIwMzIsMTc4MDI5ODkxNCwyMDQ0MDg0MS
-wtMTkwMTIyODk4NywtNTAyMDAzODRdfQ==
+eyJoaXN0b3J5IjpbMTIxNTg0NDgzMCwtMTk5NjQwMzE5MCwtMT
+g5NDY2OTc2NCwtMTAzODk2NTI5NiwtMTgzNTY3MjA3MCw4NTA2
+NjM5NTAsLTMwNTgyMjAzMiwxNzgwMjk4OTE0LDIwNDQwODQxLC
+0xOTAxMjI4OTg3LC01MDIwMDM4NF19
 -->
