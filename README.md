@@ -55,12 +55,13 @@ This controller is designed to check if the Spring Booth is running or not and h
   - Service  
   - Dao  
   - SpringBoot: webservlet/TomCat and IoC  
-  - PSQL and IEX  
+  - PSQL 
+  - IEX  
   
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NTEyNjIxNywtMTE2MTkxMTc2LDYwMT
+eyJoaXN0b3J5IjpbLTExMDkyMzEyMywtMTE2MTkxMTc2LDYwMT
 AzNzYxOCwtMTk5NjQwMzE5MCwtMTg5NDY2OTc2NCwtMTAzODk2
 NTI5NiwtMTgzNTY3MjA3MCw4NTA2NjM5NTAsLTMwNTgyMjAzMi
 wxNzgwMjk4OTE0LDIwNDQwODQxLC0xOTAxMjI4OTg3LC01MDIw
