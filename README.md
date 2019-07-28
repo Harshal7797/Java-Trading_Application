@@ -40,6 +40,7 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
   - PUT `/trader/deposit/traderId/{traderId}/amount/{amount}`: Deposit a fund to user account
   - PUT `/trader/withdraw/traderId/{traderId}/amount/{amount}`: Withdraw a fund to user account
 ## Order Controller  
+Order Controller is used to buy/sell stock from user defined company such as  
 - High-level description for this controller.  
 - briefly explain your endpoints in this controller  
   - /order/MarketOrder: explain what is a market order, and how does your business logic work.   
@@ -62,8 +63,9 @@ This controller is designed to check if the Spring Booth is running or not and h
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjE5MTE3Niw2MDEwMzc2MTgsLTE5OT
-Y0MDMxOTAsLTE4OTQ2Njk3NjQsLTEwMzg5NjUyOTYsLTE4MzU2
-NzIwNzAsODUwNjYzOTUwLC0zMDU4MjIwMzIsMTc4MDI5ODkxNC
-wyMDQ0MDg0MSwtMTkwMTIyODk4NywtNTAyMDAzODRdfQ==
+eyJoaXN0b3J5IjpbODQxMzQwMTE1LC0xMTYxOTExNzYsNjAxMD
+M3NjE4LC0xOTk2NDAzMTkwLC0xODk0NjY5NzY0LC0xMDM4OTY1
+Mjk2LC0xODM1NjcyMDcwLDg1MDY2Mzk1MCwtMzA1ODIyMDMyLD
+E3ODAyOTg5MTQsMjA0NDA4NDEsLTE5MDEyMjg5ODcsLTUwMjAw
+Mzg0XX0=
 -->
