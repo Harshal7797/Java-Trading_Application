@@ -12,7 +12,7 @@
   #run `idea` in terminal to propagate the enviornment vaiable
   PSQL_URL jdbc:postgresql://localhost:5432/jrvstrading
   
-  ``
+  ```
   
    
 - How to consume REST API? (Swagger screenshot and postman with OpenAPI Specification, e.g. [http://35.231.122.184:5000/v2/api-docs](http://35.231.122.184:5000/v2/api-docs)  
@@ -48,6 +48,6 @@ What's swagger (1-2 sentences, you can copy from swagger docs). Why are we using
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMDY1NjMzOCwxNzgwMjk4OTE0LDIwND
-QwODQxLC0xOTAxMjI4OTg3LC01MDIwMDM4NF19
+eyJoaXN0b3J5IjpbMzUzODIxODk2LDE3ODAyOTg5MTQsMjA0ND
+A4NDEsLTE5MDEyMjg5ODcsLTUwMjAwMzg0XX0=
 -->
