@@ -23,8 +23,8 @@
 Swagger is an open-source software framework backed by a large ecosystem of tools that helps developers design, build, document, and consume RESTful Web services. API design is prone to errors, and it’s extremely difficult and time-consuming to spot and rectify mistakes when modeling APIs thus using swagger simplify the job of developer who can test their endpoints using swagger graphical user interface (GUI).
  
 ## Quote Controller  
-- Quote Controller job is to . The market data for quote is coming from IEX and is  cached into the database
-- High-level description for this controller. Where is market data coming from (IEX) and how did you cache the quote data (PSQL). Briefly talk about data from within your app  
+- Quote Controller job is to `create` ,`Read`, `Update` . The market data for quote is coming from IEX and is  cached into the database
+- 
 - There are five endpoints for this controller which are listed below with brief description:
   - GET `/quote/dailyList`: list all securities that are available to trading in this trading system
   - GET `/quote/iex/ticker/{ticker}`: Display the IEX market data for user defined ticker
@@ -54,8 +54,8 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5ODE2MDc0MywtMTg5NDY2OTc2NCwtMT
-AzODk2NTI5NiwtMTgzNTY3MjA3MCw4NTA2NjM5NTAsLTMwNTgy
-MjAzMiwxNzgwMjk4OTE0LDIwNDQwODQxLC0xOTAxMjI4OTg3LC
-01MDIwMDM4NF19
+eyJoaXN0b3J5IjpbLTEyNDkwNDA0NDksLTE4OTQ2Njk3NjQsLT
+EwMzg5NjUyOTYsLTE4MzU2NzIwNzAsODUwNjYzOTUwLC0zMDU4
+MjIwMzIsMTc4MDI5ODkxNCwyMDQ0MDg0MSwtMTkwMTIyODk4Ny
+wtNTAyMDAzODRdfQ==
 -->
