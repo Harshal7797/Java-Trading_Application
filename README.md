@@ -1,5 +1,5 @@
 # Introduction  
-- The trading Application is an online stock trading simulation REST API which can allow user to `CRUD` create, read, update and delete operations on database.
+- The trading Application is an online stock trading simulation REST API which can allow user to `CRUD` create, read, update and delete operations on database. 
 - Briefly explain what does this project do (e.g. it an online stock trading simulation REST API which can blah..blah) and who can use this API (e.g. front-end developer, mobile developer, and traders can utilize this REST API)  
 - Briefly talk about technologies used in this project(e.g. It's a MicroService which is implemented with SpringBoot. PSQL database. IEX market data)  
   
@@ -62,11 +62,11 @@ This controller is designed to check if the Spring Booth is running or not and h
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQxNTQ5ODQ5LC0xMDg5Mjg4MTc0LC0xOT
-U4ODkzNjMxLDE1MTQwMTkyNDgsMTY5NDgxMTI0Miw5MzU5MzE1
-NjUsMTQ5NjU3MDMyOCwtMTgzMTc2NDcyMSwtODU4OTI1MTg2LC
-0xMTYxOTExNzYsNjAxMDM3NjE4LC0xOTk2NDAzMTkwLC0xODk0
-NjY5NzY0LC0xMDM4OTY1Mjk2LC0xODM1NjcyMDcwLDg1MDY2Mz
-k1MCwtMzA1ODIyMDMyLDE3ODAyOTg5MTQsMjA0NDA4NDEsLTE5
-MDEyMjg5ODddfQ==
+eyJoaXN0b3J5IjpbLTY2NzM5NTA3MywtMTA4OTI4ODE3NCwtMT
+k1ODg5MzYzMSwxNTE0MDE5MjQ4LDE2OTQ4MTEyNDIsOTM1OTMx
+NTY1LDE0OTY1NzAzMjgsLTE4MzE3NjQ3MjEsLTg1ODkyNTE4Ni
+wtMTE2MTkxMTc2LDYwMTAzNzYxOCwtMTk5NjQwMzE5MCwtMTg5
+NDY2OTc2NCwtMTAzODk2NTI5NiwtMTgzNTY3MjA3MCw4NTA2Nj
+M5NTAsLTMwNTgyMjAzMiwxNzgwMjk4OTE0LDIwNDQwODQxLC0x
+OTAxMjI4OTg3XX0=
 -->
