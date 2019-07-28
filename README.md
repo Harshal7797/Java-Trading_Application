@@ -60,13 +60,17 @@ This controller is designed to check if the Spring Booth is running or not and h
   - `IEX`  - Investors  Exchange is a stock exchange based in United States. For this Application we use `IEX Cloud` is a flexible financial data platform connecting a wide array of developers with curated financial data. It also offers an API service, allowing developers to query US and Canadian Stock Data. 
   
 # Improvements  
-- at least 5 improvements
+1.
+2.
+3.
+4.
+5.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2MTQ0MzczNywtMTA4OTI4ODE3NCwtMT
-k1ODg5MzYzMSwxNTE0MDE5MjQ4LDE2OTQ4MTEyNDIsOTM1OTMx
-NTY1LDE0OTY1NzAzMjgsLTE4MzE3NjQ3MjEsLTg1ODkyNTE4Ni
-wtMTE2MTkxMTc2LDYwMTAzNzYxOCwtMTk5NjQwMzE5MCwtMTg5
-NDY2OTc2NCwtMTAzODk2NTI5NiwtMTgzNTY3MjA3MCw4NTA2Nj
-M5NTAsLTMwNTgyMjAzMiwxNzgwMjk4OTE0LDIwNDQwODQxLC0x
-OTAxMjI4OTg3XX0=
+eyJoaXN0b3J5IjpbLTEyODI1OTk0MDUsLTEwODkyODgxNzQsLT
+E5NTg4OTM2MzEsMTUxNDAxOTI0OCwxNjk0ODExMjQyLDkzNTkz
+MTU2NSwxNDk2NTcwMzI4LC0xODMxNzY0NzIxLC04NTg5MjUxOD
+YsLTExNjE5MTE3Niw2MDEwMzc2MTgsLTE5OTY0MDMxOTAsLTE4
+OTQ2Njk3NjQsLTEwMzg5NjUyOTYsLTE4MzU2NzIwNzAsODUwNj
+YzOTUwLC0zMDU4MjIwMzIsMTc4MDI5ODkxNCwyMDQ0MDg0MSwt
+MTkwMTIyODk4N119
 -->
