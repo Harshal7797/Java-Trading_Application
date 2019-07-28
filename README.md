@@ -52,7 +52,7 @@ This controller is designed to check if the Spring Booth is running or not and h
 - Draw a component diagram which contains controller, service, DAO, storage layers (you can mimic the diagram from the guide)  
 - briefly explain the following logic layers or components (3-5 sentences for each)  
   - `Controller` : Parse user inputs and then calls the corresponding service method.
-  - `Service` : This component is knows as Business logic. In computer software a business logic is the part of program that encodes the real-world` business rules` that determines how data can be created, stored and changed.`Business Rules` des
+  - `Service` : This component is knows as Business logic. In computer software a business logic is the part of program that encodes the real-world` business rules` that determines how data can be created, stored and changed.`Business Rules` descibe the operation, definitions and contraints that apply to an organization.
   - `Dao` : Data Access Object which handles various object. DAO is used to map the retrieved information from `IEX Cloud` and then latter use it to persist data into `PSQL` database. 
   - `SpringBoot: webservlet/TomCat and IoC`  
   - `PSQL` - PostgrSQL, also know as postgres, is a free and open-source relational database management system `RDBMS`. It takes the information from DAO and store it into `PSQL` database using DataSouce (JDBC Connection). 
@@ -61,11 +61,10 @@ This controller is designed to check if the Spring Booth is running or not and h
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTU5OTU3OTksMTUxNDAxOTI0OCwxNj
-k0ODExMjQyLDkzNTkzMTU2NSwxNDk2NTcwMzI4LC0xODMxNzY0
-NzIxLC04NTg5MjUxODYsLTExNjE5MTE3Niw2MDEwMzc2MTgsLT
-E5OTY0MDMxOTAsLTE4OTQ2Njk3NjQsLTEwMzg5NjUyOTYsLTE4
-MzU2NzIwNzAsODUwNjYzOTUwLC0zMDU4MjIwMzIsMTc4MDI5OD
-kxNCwyMDQ0MDg0MSwtMTkwMTIyODk4NywtNTAyMDAzODRdfQ==
-
+eyJoaXN0b3J5IjpbNjQ0MTUzODI2LDE1MTQwMTkyNDgsMTY5ND
+gxMTI0Miw5MzU5MzE1NjUsMTQ5NjU3MDMyOCwtMTgzMTc2NDcy
+MSwtODU4OTI1MTg2LC0xMTYxOTExNzYsNjAxMDM3NjE4LC0xOT
+k2NDAzMTkwLC0xODk0NjY5NzY0LC0xMDM4OTY1Mjk2LC0xODM1
+NjcyMDcwLDg1MDY2Mzk1MCwtMzA1ODIyMDMyLDE3ODAyOTg5MT
+QsMjA0NDA4NDEsLTE5MDEyMjg5ODcsLTUwMjAwMzg0XX0=
 -->
