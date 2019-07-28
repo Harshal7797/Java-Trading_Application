@@ -40,7 +40,7 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
   - /order/MarketOrder: explain what is a market order, and how does your business logic work.   
 ## App controller  
 - GET `/health` to make sure SpringBoot app is up and running  
-## Optional(Dashboard controller)  
+## Dashboard controller
   
 # Architecture  
 - Draw a component diagram which contains controller, service, DAO, storage layers (you can mimic the diagram from the guide)  
@@ -54,8 +54,8 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTY0MDMxOTAsLTE4OTQ2Njk3NjQsLT
-EwMzg5NjUyOTYsLTE4MzU2NzIwNzAsODUwNjYzOTUwLC0zMDU4
-MjIwMzIsMTc4MDI5ODkxNCwyMDQ0MDg0MSwtMTkwMTIyODk4Ny
-wtNTAyMDAzODRdfQ==
+eyJoaXN0b3J5IjpbMTM2MTExNTAzMywtMTk5NjQwMzE5MCwtMT
+g5NDY2OTc2NCwtMTAzODk2NTI5NiwtMTgzNTY3MjA3MCw4NTA2
+NjM5NTAsLTMwNTgyMjAzMiwxNzgwMjk4OTE0LDIwNDQwODQxLC
+0xOTAxMjI4OTg3LC01MDIwMDM4NF19
 -->
