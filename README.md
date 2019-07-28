@@ -1,6 +1,6 @@
 # Introduction  
 - The trading Application is an online stock trading simulation REST API which can allow user to `CRUD` create, read, update and delete operations on database. This application provide functionality such as  create an account, deposit/withdraw money, buy/sell stock and view quote which is being retrieved from `IEX Cloud` market data. This REST API can be used by investor who are new to stock market and learn the basic operation to help them get started in real stock exchange. 
--  The technology used in this project, SpringBoot
+-  The technology used to implement this Micro Service is SpringBoot. 
 - Briefly talk about technologies used in this project(e.g. It's a MicroService which is implemented with SpringBoot. PSQL database. IEX market data)  
   
 # Quick Start  
@@ -66,7 +66,7 @@ This controller is designed to check if the Spring Booth is running or not and h
 4.
 5.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc5MDczMDg1LC0xMDg5Mjg4MTc0LC0xOT
+eyJoaXN0b3J5IjpbNjQ3OTE2MDk4LC0xMDg5Mjg4MTc0LC0xOT
 U4ODkzNjMxLDE1MTQwMTkyNDgsMTY5NDgxMTI0Miw5MzU5MzE1
 NjUsMTQ5NjU3MDMyOCwtMTgzMTc2NDcyMSwtODU4OTI1MTg2LC
 0xMTYxOTExNzYsNjAxMDM3NjE4LC0xOTk2NDAzMTkwLC0xODk0
