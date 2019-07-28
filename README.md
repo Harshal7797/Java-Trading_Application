@@ -4,7 +4,7 @@
   
 # Quick Start  
 - Prequiresites: Java, Docker, CentOS 7  
-- PSQL init  
+- PSQL init 
 - git clone and mvn build  
 - Start Springboot app using a shell script  
   - describe env vars  
@@ -41,5 +41,5 @@ What's swagger (1-2 sentences, you can copy from swagger docs). Why are we using
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExOTU2Nzk5NiwtNTAyMDAzODRdfQ==
+eyJoaXN0b3J5IjpbLTIxMDAzMzM1NCwtNTAyMDAzODRdfQ==
 -->
