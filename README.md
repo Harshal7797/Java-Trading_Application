@@ -32,7 +32,7 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
   - PUT `/quote/`: Update a given quote in the quote table
   - PUT `/quote/iexMarketData`: Update all quotes from IEX which is an external market data source  
 ## Trader Controller  
-- High-level description for trader controller(e.g. it can manage trader and account information. it can deposit and withdraw fund from a given account)  
+- Trader Controller is 
 - briefly explain your endpoints in this controller  
 ## Order Controller  
 - High-level description for this controller.  
@@ -57,8 +57,8 @@ This controller is designed to check if the Spring Booth is running or not and h
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAxMDM3NjE4LC0xOTk2NDAzMTkwLC0xOD
-k0NjY5NzY0LC0xMDM4OTY1Mjk2LC0xODM1NjcyMDcwLDg1MDY2
-Mzk1MCwtMzA1ODIyMDMyLDE3ODAyOTg5MTQsMjA0NDA4NDEsLT
-E5MDEyMjg5ODcsLTUwMjAwMzg0XX0=
+eyJoaXN0b3J5IjpbLTE1NjAwMTQ1MTEsNjAxMDM3NjE4LC0xOT
+k2NDAzMTkwLC0xODk0NjY5NzY0LC0xMDM4OTY1Mjk2LC0xODM1
+NjcyMDcwLDg1MDY2Mzk1MCwtMzA1ODIyMDMyLDE3ODAyOTg5MT
+QsMjA0NDA4NDEsLTE5MDEyMjg5ODcsLTUwMjAwMzg0XX0=
 -->
