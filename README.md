@@ -4,7 +4,7 @@
   
 # Quick Start  
 - Prequiresites: Java, Docker, CentOS 7  
-- PSQL init - Database initialization is done by running the following script `init_db.sql`. After successful  execution of the first script. run this script `schema.sql` to populate the database with necessary tables.
+- PSQL init - Database initialization is done by running the following script ``. After successful  execution of the first script. run this script `schema.sql` to populate the database with necessary tables.
 - git clone and mvn build  
 - Start Springboot app using a shell script  
   - describe env vars  
@@ -41,5 +41,5 @@ What's swagger (1-2 sentences, you can copy from swagger docs). Why are we using
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzcwMDc5MDA1LC01MDIwMDM4NF19
+eyJoaXN0b3J5IjpbLTIwODc3OTYwMCwtNTAyMDAzODRdfQ==
 -->
