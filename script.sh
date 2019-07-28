@@ -8,7 +8,7 @@ if [ "$#" -ne 5 ]; then
     echo "Illegal number of parameters"
     exit 1
 fi
-bbjj
+
 export SPRING_PROFILES_ACTIVE=$1
 export PSQL_HOST=$2
 export PSQL_USER=$3
