@@ -23,7 +23,7 @@
 Swagger is an open-source software framework backed by a large ecosystem of tools that helps developers design, build, document, and consume RESTful Web services. API design is prone to errors, and it’s extremely difficult and time-consuming to spot and rectify mistakes when modeling APIs thus using swagger simplify the job of developer who can test their endpoints using swagger graphical user interface (GUI).
  
 ## Quote Controller  
-- Quote Controller job is to `create` ,`Read` and `Update` quote  related information which is being retrieved from IEX cloud using HTTP request and is cached into `quote` table in the database `jrvstrading`  using JDBC connection.
+- Quote Controller is designed to `create` ,`Read` and `Update` quote  related information which is being retrieved from IEX cloud using HTTP request and is cached into `quote` table in the database `jrvstrading`  using JDBC connection.
 
 - There are five endpoints for this controller which are listed below with brief description:
   - GET `/quote/dailyList`: list all securities that are available to trading in this trading system
@@ -32,7 +32,7 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
   - PUT `/quote/`: Update a given quote in the quote table
   - PUT `/quote/iexMarketData`: Update all quotes from IEX which is an external market data source  
 ## Trader Controller  
-- Trader Controller is designed to  be used to `Create`,`Update` and `DELETE` a trader and an account associated with specific user. It can also deposit and withdraw money from user account.
+- Trader Controller is designed to provide functionality  of `Create`,`Update` and `DELETE` a trader and an account associated with specific user. It can also deposit and withdraw money from user account.
 - This controller also have five endpoints which are listed below with brief description:
 	- DELETE `/trader/traderID/{traderId}`: Delete a trader if the balance in an account is zero and no position is open. Also, this will also delete associated account and sezurityOrders
   - POST `/trader/}`: Create a trader and an account with DTO
@@ -62,8 +62,8 @@ This controller is designed to check if the Spring Booth is running or not and h
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgyMDE2NjE0LDYwMTAzNzYxOCwtMTk5Nj
-QwMzE5MCwtMTg5NDY2OTc2NCwtMTAzODk2NTI5NiwtMTgzNTY3
-MjA3MCw4NTA2NjM5NTAsLTMwNTgyMjAzMiwxNzgwMjk4OTE0LD
-IwNDQwODQxLC0xOTAxMjI4OTg3LC01MDIwMDM4NF19
+eyJoaXN0b3J5IjpbLTExNjE5MTE3Niw2MDEwMzc2MTgsLTE5OT
+Y0MDMxOTAsLTE4OTQ2Njk3NjQsLTEwMzg5NjUyOTYsLTE4MzU2
+NzIwNzAsODUwNjYzOTUwLC0zMDU4MjIwMzIsMTc4MDI5ODkxNC
+wyMDQ0MDg0MSwtMTkwMTIyODk4NywtNTAyMDAzODRdfQ==
 -->
