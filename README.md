@@ -37,9 +37,10 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
 ## Order Controller  
 - High-level description for this controller.  
 - briefly explain your endpoints in this controller  
-  - /order/MarketOrder: explain what is a market order, and how does your business logic work.   
+  - /order/MarketOrder: explain what is a market order, and how does your business logic work.   \
+## Dashboard Controller
   ## Dashboard controller
-## App controller  
+
 This controller is designed to check if the Spring Booth is running or not and has only one endpoints.
 - GET `/health` to make sure SpringBoot app is up and running  
 
@@ -56,8 +57,8 @@ This controller is designed to check if the Spring Booth is running or not and h
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjUwNzcyNjMsLTE5OTY0MDMxOTAsLT
-E4OTQ2Njk3NjQsLTEwMzg5NjUyOTYsLTE4MzU2NzIwNzAsODUw
-NjYzOTUwLC0zMDU4MjIwMzIsMTc4MDI5ODkxNCwyMDQ0MDg0MS
-wtMTkwMTIyODk4NywtNTAyMDAzODRdfQ==
+eyJoaXN0b3J5IjpbLTU3NTE3MTk4MiwtMTk5NjQwMzE5MCwtMT
+g5NDY2OTc2NCwtMTAzODk2NTI5NiwtMTgzNTY3MjA3MCw4NTA2
+NjM5NTAsLTMwNTgyMjAzMiwxNzgwMjk4OTE0LDIwNDQwODQxLC
+0xOTAxMjI4OTg3LC01MDIwMDM4NF19
 -->
