@@ -11,7 +11,9 @@
   ```add enviornment variable to ~/.bash_profile
   #run `idea` in terminal to propagate the enviornment vaiable
   PSQL_URL jdbc:postgresql://localhost:5432/jrvstrading
-  
+  PSQL_USER postgres
+  PSQL_PASSWORD password (Can be anything)
+  SPRING 
   ```
   
    
@@ -48,6 +50,6 @@ What's swagger (1-2 sentences, you can copy from swagger docs). Why are we using
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUzODIxODk2LDE3ODAyOTg5MTQsMjA0ND
-A4NDEsLTE5MDEyMjg5ODcsLTUwMjAwMzg0XX0=
+eyJoaXN0b3J5IjpbLTkwNTcxNTEyMywxNzgwMjk4OTE0LDIwND
+QwODQxLC0xOTAxMjI4OTg3LC01MDIwMDM4NF19
 -->
