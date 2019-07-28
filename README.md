@@ -13,7 +13,8 @@
   PSQL_URL jdbc:postgresql://localhost:5432/jrvstrading
   PSQL_USER postgres
   PSQL_PASSWORD password (Can be anything)
-  SPRING 
+  SPRING_PROFILES_ACTIVE dev
+  IEX_PUB_TOKEN your_iex_token
   ```
   
    
@@ -50,6 +51,6 @@ What's swagger (1-2 sentences, you can copy from swagger docs). Why are we using
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNTcxNTEyMywxNzgwMjk4OTE0LDIwND
+eyJoaXN0b3J5IjpbLTMwNTgyMjAzMiwxNzgwMjk4OTE0LDIwND
 QwODQxLC0xOTAxMjI4OTg3LC01MDIwMDM4NF19
 -->
