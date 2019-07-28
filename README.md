@@ -51,7 +51,7 @@ This controller is designed to check if the Spring Booth is running or not and h
 # Architecture  
 - Draw a component diagram which contains controller, service, DAO, storage layers (you can mimic the diagram from the guide)  
 - briefly explain the following logic layers or components (3-5 sentences for each)  
-  - `Controller`   
+  - `Controller` : Parse user inputs and then calls the corresponding service method
   - `Service`  
   - `Dao`  
   - `SpringBoot: webservlet/TomCat and IoC`  
@@ -61,9 +61,9 @@ This controller is designed to check if the Spring Booth is running or not and h
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU1ODk2NzYxLC0xMTYxOTExNzYsNjAxMD
-M3NjE4LC0xOTk2NDAzMTkwLC0xODk0NjY5NzY0LC0xMDM4OTY1
-Mjk2LC0xODM1NjcyMDcwLDg1MDY2Mzk1MCwtMzA1ODIyMDMyLD
-E3ODAyOTg5MTQsMjA0NDA4NDEsLTE5MDEyMjg5ODcsLTUwMjAw
-Mzg0XX0=
+eyJoaXN0b3J5IjpbMTg1NjcwNzA1MSwtMTE2MTkxMTc2LDYwMT
+AzNzYxOCwtMTk5NjQwMzE5MCwtMTg5NDY2OTc2NCwtMTAzODk2
+NTI5NiwtMTgzNTY3MjA3MCw4NTA2NjM5NTAsLTMwNTgyMjAzMi
+wxNzgwMjk4OTE0LDIwNDQwODQxLC0xOTAxMjI4OTg3LC01MDIw
+MDM4NF19
 -->
