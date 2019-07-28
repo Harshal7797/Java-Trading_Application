@@ -1,6 +1,5 @@
-#Introduction
+# Introduction
 Trading Application
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODgzOTc2Njk2XX0=
+eyJoaXN0b3J5IjpbLTUwMjAwMzg0XX0=
 -->
