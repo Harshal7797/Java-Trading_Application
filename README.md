@@ -35,7 +35,7 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
 - Trader Controller is designed to  be used to `Create`,`Update` and `DELETE` a trader and an account associated with specific user. It can also deposit and withdraw money from user account.
 - This controller also have five endpoints which are listed below with brief description:
 	- DELETE `/trader/traderID/{traderId}`: Delete a trader if the balance in an account is zero and no position is open. Also, this will also delete associated account and sezurityOrders
-  - GET `/quote/iex/ticker/{ticker}`: Display the IEX market data for user defined ticker
+  - POST`/quote/iex/ticker/{ticker}`: Display the IEX market data for user defined ticker
 - briefly explain your endpoints in this controller  
 ## Order Controller  
 - High-level description for this controller.  
@@ -60,8 +60,8 @@ This controller is designed to check if the Spring Booth is running or not and h
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzYzNjc1NTcsNjAxMDM3NjE4LC0xOT
-k2NDAzMTkwLC0xODk0NjY5NzY0LC0xMDM4OTY1Mjk2LC0xODM1
-NjcyMDcwLDg1MDY2Mzk1MCwtMzA1ODIyMDMyLDE3ODAyOTg5MT
-QsMjA0NDA4NDEsLTE5MDEyMjg5ODcsLTUwMjAwMzg0XX0=
+eyJoaXN0b3J5IjpbMzQyMTEwNzI1LDYwMTAzNzYxOCwtMTk5Nj
+QwMzE5MCwtMTg5NDY2OTc2NCwtMTAzODk2NTI5NiwtMTgzNTY3
+MjA3MCw4NTA2NjM5NTAsLTMwNTgyMjAzMiwxNzgwMjk4OTE0LD
+IwNDQwODQxLC0xOTAxMjI4OTg3LC01MDIwMDM4NF19
 -->
