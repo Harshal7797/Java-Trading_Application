@@ -10,7 +10,8 @@
   - This trading application uses few environment variable that has been initialized by user in the OS. To run this application first user must setup their own Enviornment variable shown below.
   ```add enviornment variable to ~/.bash_profile
   #run `idea` in terminal to propagate the enviornment vaiable
-  PSQL_URL jdbc:postgresql://localhost:5
+  PSQL_URL jdbc:postgresql://localhost:5432/jrvstrading
+  
   ``
   
    
@@ -47,6 +48,6 @@ What's swagger (1-2 sentences, you can copy from swagger docs). Why are we using
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDUzNzgyMjg4LDE3ODAyOTg5MTQsMjA0ND
-A4NDEsLTE5MDEyMjg5ODcsLTUwMjAwMzg0XX0=
+eyJoaXN0b3J5IjpbLTEwNzc0NzY5NjAsMTc4MDI5ODkxNCwyMD
+Q0MDg0MSwtMTkwMTIyODk4NywtNTAyMDAzODRdfQ==
 -->
