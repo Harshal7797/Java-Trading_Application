@@ -56,14 +56,14 @@ This controller is designed to check if the Spring Booth is running or not and h
   - `Dao` : Data Access Object which handles 
   - `SpringBoot: webservlet/TomCat and IoC`  
   - `PSQL` 
-  - `IEX`  
+  - `IEX`  - Investors  Exchange is a stock exchange based in United States. 
   
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1ODkyNTE4NiwtMTE2MTkxMTc2LDYwMT
-AzNzYxOCwtMTk5NjQwMzE5MCwtMTg5NDY2OTc2NCwtMTAzODk2
-NTI5NiwtMTgzNTY3MjA3MCw4NTA2NjM5NTAsLTMwNTgyMjAzMi
-wxNzgwMjk4OTE0LDIwNDQwODQxLC0xOTAxMjI4OTg3LC01MDIw
-MDM4NF19
+eyJoaXN0b3J5IjpbOTk0MjQwOTQ4LC04NTg5MjUxODYsLTExNj
+E5MTE3Niw2MDEwMzc2MTgsLTE5OTY0MDMxOTAsLTE4OTQ2Njk3
+NjQsLTEwMzg5NjUyOTYsLTE4MzU2NzIwNzAsODUwNjYzOTUwLC
+0zMDU4MjIwMzIsMTc4MDI5ODkxNCwyMDQ0MDg0MSwtMTkwMTIy
+ODk4NywtNTAyMDAzODRdfQ==
 -->
