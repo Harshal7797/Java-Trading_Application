@@ -36,7 +36,7 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
 - This controller also have five endpoints which are listed below with brief description:
 	- DELETE `/trader/traderID/{traderId}`: Delete a trader if the balance in an account is zero and no position is open. Also, this will also delete associated account and sezurityOrders
   - POST `/trader/}`: Create a trader and an account with DTO
-  -   POST `/trader/firstname/{firstname}/lastname/{lastname}/dob/{dob}/country/{country}/email/{email}`: Create a Trader and 
+  -   POST `/trader/firstname/{firstname}/lastname/{lastname}/dob/{dob}/country/{country}/email/{email}`: Create a trader and an account
 ## Order Controller  
 - High-level description for this controller.  
 - briefly explain your endpoints in this controller  
@@ -60,7 +60,7 @@ This controller is designed to check if the Spring Booth is running or not and h
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1MjY2NDc2LDYwMTAzNzYxOCwtMTk5Nj
+eyJoaXN0b3J5IjpbOTMwNTg1NDAyLDYwMTAzNzYxOCwtMTk5Nj
 QwMzE5MCwtMTg5NDY2OTc2NCwtMTAzODk2NTI5NiwtMTgzNTY3
 MjA3MCw4NTA2NjM5NTAsLTMwNTgyMjAzMiwxNzgwMjk4OTE0LD
 IwNDQwODQxLC0xOTAxMjI4OTg3LC01MDIwMDM4NF19
