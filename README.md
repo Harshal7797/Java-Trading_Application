@@ -34,7 +34,7 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
 ## Trader Controller  
 - High-level description for trader controller(e.g. it can manage trader and account information. it can deposit and withdraw fund from a given account)  
 - briefly explain your endpoints in this controller  
-##Order Controller  
+## Order Controller  
 - High-level description for this controller.  
 - briefly explain your endpoints in this controller  
   - /order/MarketOrder: explain what is a market order, and how does your business logic work.   
@@ -56,8 +56,8 @@ This controller is designed to check if the Spring Booth is running or not and h
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2NjAzODU5LC0xOTk2NDAzMTkwLC0xOD
-k0NjY5NzY0LC0xMDM4OTY1Mjk2LC0xODM1NjcyMDcwLDg1MDY2
-Mzk1MCwtMzA1ODIyMDMyLDE3ODAyOTg5MTQsMjA0NDA4NDEsLT
-E5MDEyMjg5ODcsLTUwMjAwMzg0XX0=
+eyJoaXN0b3J5IjpbLTE3NjUwNzcyNjMsLTE5OTY0MDMxOTAsLT
+E4OTQ2Njk3NjQsLTEwMzg5NjUyOTYsLTE4MzU2NzIwNzAsODUw
+NjYzOTUwLC0zMDU4MjIwMzIsMTc4MDI5ODkxNCwyMDQ0MDg0MS
+wtMTkwMTIyODk4NywtNTAyMDAzODRdfQ==
 -->
