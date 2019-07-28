@@ -7,8 +7,10 @@
 - PSQL init - Database initialization is done by running the following script `/scripts/start_trading.sh`. This script will start the docker initialize database and populate it with necessary tables.
 - git clone and mvn build  
 - Start Springboot app using a following shell script  `/scripts/start_trading.sh` and once the application started it can be accessible using Swagger-UI and through Postman app. To access it via Postman you would need to download and import it to Postman through this link `http://localhost:8080/v2/api-docs`. To use Swagger-UI use this following link `http://localhost:5000/swagger-ui.html`
-  - This trading application uses few environment variable that has been initialized by user in the OS.
-	  - 
+  - This trading application uses few environment variable that has been initialized by user in the OS. To run this application first user must setup their own Enviornment variable shown below.
+  -
+  
+   
 - How to consume REST API? (Swagger screenshot and postman with OpenAPI Specification, e.g. [http://35.231.122.184:5000/v2/api-docs](http://35.231.122.184:5000/v2/api-docs)  
   
 # REST API Usage  
@@ -42,6 +44,6 @@ What's swagger (1-2 sentences, you can copy from swagger docs). Why are we using
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyMjI2Njg4MCwxNzgwMjk4OTE0LDIwND
+eyJoaXN0b3J5IjpbLTQyMzAyNjEwMCwxNzgwMjk4OTE0LDIwND
 QwODQxLC0xOTAxMjI4OTg3LC01MDIwMDM4NF19
 -->
