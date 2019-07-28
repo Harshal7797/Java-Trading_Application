@@ -53,7 +53,7 @@ This controller is designed to check if the Spring Booth is running or not and h
 - briefly explain the following logic layers or components (3-5 sentences for each)  
   - `Controller` : Parse user inputs and then calls the corresponding service method
   - `Service` : This component is knows as Business logic.
-  - `Dao` : Data Access Object which handles 
+  - `Dao` : Data Access Object which handles various object.
   - `SpringBoot: webservlet/TomCat and IoC`  
   - `PSQL` - PostgrSQL, also know as postgres, is a free and open-source relational database management system `RDBMS`. It takes the information from DAO and store it into `PSQL` database using DataSouce (JDBC Connection). 
   - `IEX`  - Investors  Exchange is a stock exchange based in United States. For this Application we use `IEX Cloud` is a flexible financial data platform connecting a wide array of developers with curated financial data. It also offers an API service, allowing developers to query US and Canadian Stock Data. 
@@ -61,10 +61,10 @@ This controller is designed to check if the Spring Booth is running or not and h
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNDAxOTI0OCwxNjk0ODExMjQyLDkzNT
-kzMTU2NSwxNDk2NTcwMzI4LC0xODMxNzY0NzIxLC04NTg5MjUx
-ODYsLTExNjE5MTE3Niw2MDEwMzc2MTgsLTE5OTY0MDMxOTAsLT
-E4OTQ2Njk3NjQsLTEwMzg5NjUyOTYsLTE4MzU2NzIwNzAsODUw
-NjYzOTUwLC0zMDU4MjIwMzIsMTc4MDI5ODkxNCwyMDQ0MDg0MS
-wtMTkwMTIyODk4NywtNTAyMDAzODRdfQ==
+eyJoaXN0b3J5IjpbMTUzNDEyMjgyLDE1MTQwMTkyNDgsMTY5ND
+gxMTI0Miw5MzU5MzE1NjUsMTQ5NjU3MDMyOCwtMTgzMTc2NDcy
+MSwtODU4OTI1MTg2LC0xMTYxOTExNzYsNjAxMDM3NjE4LC0xOT
+k2NDAzMTkwLC0xODk0NjY5NzY0LC0xMDM4OTY1Mjk2LC0xODM1
+NjcyMDcwLDg1MDY2Mzk1MCwtMzA1ODIyMDMyLDE3ODAyOTg5MT
+QsMjA0NDA4NDEsLTE5MDEyMjg5ODcsLTUwMjAwMzg0XX0=
 -->
