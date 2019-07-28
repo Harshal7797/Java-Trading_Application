@@ -6,7 +6,7 @@
 - Prequiresites: Java, Docker, CentOS 7  
 - PSQL init - Database initialization is done by running the following script `/scripts/start_trading.sh`. This script will start the docker initialize database and populate it with necessary tables.
 - git clone and mvn build  
-- Start Springboot app using a following shell script  `/scripts/start_trading.sh` and once the application started it can be accessible using Swagger-UI 
+- Start Springboot app using a following shell script  `/scripts/start_trading.sh` and once the application started it can be accessible using Swagger-UI and through Postman app. To access it via Postman you would need 
   - describe env vars  
 - How to consume REST API? (Swagger screenshot and postman with OpenAPI Specification, e.g. [http://35.231.122.184:5000/v2/api-docs](http://35.231.122.184:5000/v2/api-docs)  
   
@@ -41,6 +41,6 @@ What's swagger (1-2 sentences, you can copy from swagger docs). Why are we using
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyODE2ODAyMiwyMDQ0MDg0MSwtMTkwMT
+eyJoaXN0b3J5IjpbLTY2MTcwMDExMywyMDQ0MDg0MSwtMTkwMT
 IyODk4NywtNTAyMDAzODRdfQ==
 -->
