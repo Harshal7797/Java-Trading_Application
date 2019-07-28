@@ -55,7 +55,7 @@ This controller is designed to check if the Spring Booth is running or not and h
   - `Controller` : Parse user inputs and then calls the corresponding service method.
   - `Service` : This component is knows as Business logic. In computer software a business logic is the part of program that encodes the real-world` business rules` that determines how data can be created, stored and changed.`Business Rules` describe the operation, definitions and constraints that apply to an organization.
   - `Dao` : Data Access Object which handles various object. DAO is used to map the retrieved information from `IEX Cloud` and then latter use it to persist data into `PSQL` database. 
-  - `SpringBoot: webservlet/TomCat and IoC`  
+  - `SpringBoot: webservlet/TomCat and IoC` : Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".
   - `PSQL` - PostgrSQL, also know as postgres, is a free and open-source relational database management system `RDBMS`. It takes the information from DAO and store it into `PSQL` database using DataSouce (JDBC Connection). 
   - `IEX`  - Investors  Exchange is a stock exchange based in United States. For this Application we use `IEX Cloud` is a flexible financial data platform connecting a wide array of developers with curated financial data. It also offers an API service, allowing developers to query US and Canadian Stock Data. 
   
@@ -66,11 +66,11 @@ This controller is designed to check if the Spring Booth is running or not and h
 4.
 5.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTQwNTU4NDIsLTEwODkyODgxNzQsLT
-E5NTg4OTM2MzEsMTUxNDAxOTI0OCwxNjk0ODExMjQyLDkzNTkz
-MTU2NSwxNDk2NTcwMzI4LC0xODMxNzY0NzIxLC04NTg5MjUxOD
-YsLTExNjE5MTE3Niw2MDEwMzc2MTgsLTE5OTY0MDMxOTAsLTE4
-OTQ2Njk3NjQsLTEwMzg5NjUyOTYsLTE4MzU2NzIwNzAsODUwNj
-YzOTUwLC0zMDU4MjIwMzIsMTc4MDI5ODkxNCwyMDQ0MDg0MSwt
-MTkwMTIyODk4N119
+eyJoaXN0b3J5IjpbNzc5MDczMDg1LC0xMDg5Mjg4MTc0LC0xOT
+U4ODkzNjMxLDE1MTQwMTkyNDgsMTY5NDgxMTI0Miw5MzU5MzE1
+NjUsMTQ5NjU3MDMyOCwtMTgzMTc2NDcyMSwtODU4OTI1MTg2LC
+0xMTYxOTExNzYsNjAxMDM3NjE4LC0xOTk2NDAzMTkwLC0xODk0
+NjY5NzY0LC0xMDM4OTY1Mjk2LC0xODM1NjcyMDcwLDg1MDY2Mz
+k1MCwtMzA1ODIyMDMyLDE3ODAyOTg5MTQsMjA0NDA4NDEsLTE5
+MDEyMjg5ODddfQ==
 -->
