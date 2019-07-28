@@ -26,7 +26,7 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
 - High-level description for this controller. Where is market data coming from (IEX) and how did you cache the quote data (PSQL). Briefly talk about data from within your app  
 - briefly explain your endpoints in this controller  
   - GET `/quote/dailyList`: list all securities that are available to trading in this trading system
-  - -GET `/quote/iex/ticker/{ticker}`: Dispaly the IEX market data for user defined ticker
+  - GET `/quote/iex/ticker/{ticker}`: Dispaly the IEX market data for user defined ticker
   - PUT `/quote/iexMarketData`: Update all quotes from IEX which is an external market data source  
 ## Trader Controller  
 - High-level description for trader controller(e.g. it can manage trader and account information. it can deposit and withdraw fund from a given account)  
@@ -51,7 +51,7 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwODAxMDY4NCwtMTgzNTY3MjA3MCw4NT
-A2NjM5NTAsLTMwNTgyMjAzMiwxNzgwMjk4OTE0LDIwNDQwODQx
-LC0xOTAxMjI4OTg3LC01MDIwMDM4NF19
+eyJoaXN0b3J5IjpbLTE2NDE3MzcxODksLTE4MzU2NzIwNzAsOD
+UwNjYzOTUwLC0zMDU4MjIwMzIsMTc4MDI5ODkxNCwyMDQ0MDg0
+MSwtMTkwMTIyODk4NywtNTAyMDAzODRdfQ==
 -->
