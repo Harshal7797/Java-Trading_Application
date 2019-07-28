@@ -38,7 +38,7 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
   - POST `/trader/}`: Create a trader and an account with DTO
   -   POST `/trader/firstname/{firstname}/lastname/{lastname}/dob/{dob}/country/{country}/email/{email}`: Create a trader and an account
   - PUT `/trader/deposit/traderId/{traderId}/amount/{amount}`: Deposit a fund to user account
-  - PUT `/trader/withdraw/traderId/{traderId}/amount/{amount}`: Witha fund to user account
+  - PUT `/trader/withdraw/traderId/{traderId}/amount/{amount}`: Withdraw a fund to user account
 ## Order Controller  
 - High-level description for this controller.  
 - briefly explain your endpoints in this controller  
@@ -62,8 +62,8 @@ This controller is designed to check if the Spring Booth is running or not and h
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMTYxODg3Miw2MDEwMzc2MTgsLTE5OT
-Y0MDMxOTAsLTE4OTQ2Njk3NjQsLTEwMzg5NjUyOTYsLTE4MzU2
-NzIwNzAsODUwNjYzOTUwLC0zMDU4MjIwMzIsMTc4MDI5ODkxNC
-wyMDQ0MDg0MSwtMTkwMTIyODk4NywtNTAyMDAzODRdfQ==
+eyJoaXN0b3J5IjpbOTgyMDE2NjE0LDYwMTAzNzYxOCwtMTk5Nj
+QwMzE5MCwtMTg5NDY2OTc2NCwtMTAzODk2NTI5NiwtMTgzNTY3
+MjA3MCw4NTA2NjM5NTAsLTMwNTgyMjAzMiwxNzgwMjk4OTE0LD
+IwNDQwODQxLC0xOTAxMjI4OTg3LC01MDIwMDM4NF19
 -->
