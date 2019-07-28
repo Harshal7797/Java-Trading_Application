@@ -24,7 +24,7 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
  
 ## Quote Controller  
 - High-level description for this controller. Where is market data coming from (IEX) and how did you cache the quote data (PSQL). Briefly talk about data from within your app  
-- There are five endpoints for this controller which are listed below with brief description
+- There are five endpoints for this controller which are listed below with brief description:
   - GET `/quote/dailyList`: list all securities that are available to trading in this trading system
   - GET `/quote/iex/ticker/{ticker}`: Display the IEX market data for user defined ticker
   - POST `/quote/tickerId/{tickerId}`: Add a new ticker to the dailyList (quote table)
@@ -53,7 +53,7 @@ Swagger is an open-source software framework backed by a large ecosystem of tool
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTk0ODgwMDAsLTEwMzg5NjUyOTYsLT
+eyJoaXN0b3J5IjpbLTE4OTQ2Njk3NjQsLTEwMzg5NjUyOTYsLT
 E4MzU2NzIwNzAsODUwNjYzOTUwLC0zMDU4MjIwMzIsMTc4MDI5
 ODkxNCwyMDQ0MDg0MSwtMTkwMTIyODk4NywtNTAyMDAzODRdfQ
 ==
