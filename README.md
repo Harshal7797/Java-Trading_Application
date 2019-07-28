@@ -16,8 +16,6 @@
   SPRING_PROFILES_ACTIVE dev
   IEX_PUB_TOKEN your_iex_token
   ```
-  
-   
 - How to consume REST API? (Swagger screenshot and postman with OpenAPI Specification, e.g. [http://35.231.122.184:5000/v2/api-docs](http://35.231.122.184:5000/v2/api-docs)  
   
 # REST API Usage  
@@ -51,6 +49,7 @@ What's swagger (1-2 sentences, you can copy from swagger docs). Why are we using
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwNTgyMjAzMiwxNzgwMjk4OTE0LDIwND
-QwODQxLC0xOTAxMjI4OTg3LC01MDIwMDM4NF19
+eyJoaXN0b3J5IjpbLTExNzk3NDA2NjYsLTMwNTgyMjAzMiwxNz
+gwMjk4OTE0LDIwNDQwODQxLC0xOTAxMjI4OTg3LC01MDIwMDM4
+NF19
 -->
