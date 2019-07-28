@@ -52,7 +52,7 @@ This controller is designed to check if the Spring Booth is running or not and h
 - Draw a component diagram which contains controller, service, DAO, storage layers (you can mimic the diagram from the guide)  
 - briefly explain the following logic layers or components (3-5 sentences for each)  
   - `Controller` : Parse user inputs and then calls the corresponding service method
-  - `Service` : 
+  - `Service` : This component is knows as Business logic.
   - `Dao` : Data Access Object which handles 
   - `SpringBoot: webservlet/TomCat and IoC`  
   - `PSQL` - PostgrSQL, also know as postgres, is a free and open-source relational database management system `RDBMS`.
@@ -61,9 +61,10 @@ This controller is designed to check if the Spring Booth is running or not and h
 # Improvements  
 - at least 5 improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5NjU3MDMyOCwtMTgzMTc2NDcyMSwtOD
-U4OTI1MTg2LC0xMTYxOTExNzYsNjAxMDM3NjE4LC0xOTk2NDAz
-MTkwLC0xODk0NjY5NzY0LC0xMDM4OTY1Mjk2LC0xODM1NjcyMD
-cwLDg1MDY2Mzk1MCwtMzA1ODIyMDMyLDE3ODAyOTg5MTQsMjA0
-NDA4NDEsLTE5MDEyMjg5ODcsLTUwMjAwMzg0XX0=
+eyJoaXN0b3J5IjpbMTYzMDU1NTE0OSwxNDk2NTcwMzI4LC0xOD
+MxNzY0NzIxLC04NTg5MjUxODYsLTExNjE5MTE3Niw2MDEwMzc2
+MTgsLTE5OTY0MDMxOTAsLTE4OTQ2Njk3NjQsLTEwMzg5NjUyOT
+YsLTE4MzU2NzIwNzAsODUwNjYzOTUwLC0zMDU4MjIwMzIsMTc4
+MDI5ODkxNCwyMDQ0MDg0MSwtMTkwMTIyODk4NywtNTAyMDAzOD
+RdfQ==
 -->
