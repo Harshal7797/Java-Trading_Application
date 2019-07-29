@@ -1,0 +1,24 @@
+package ca.jrvs.apps.trading.dao;
+
+import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MarketDataDaoTest {
+
+    @Test
+    public void Test(){
+        PoolingHttpClientConnectionManager cm = new PoolingHttpClientConnectionManager();
+        cm.setMaxTotal(100);
+        cm.setDefaultMaxPerRoute(50);
+        List<String> testi = new ArrayList<>();
+        testi.add("AAPL");
+        testi.add("MSFT");
+        //MarketDataDao test =new MarketDataDao(cm);
+        //test.findIexQuoteByTicker("aapl");
+        // test.findIexQuoteByTicker(testi);
+    }
+
+}
