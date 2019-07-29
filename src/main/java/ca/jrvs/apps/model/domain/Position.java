@@ -57,5 +57,4 @@ public class Position {
                 .append("ticker", ticker)
                 .toString();
     }
-
 }

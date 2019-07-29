@@ -57,5 +57,4 @@ public class Account implements Entity<Integer> {
                 .append("traderId", traderId)
                 .toString();
     }
-
 }

@@ -115,5 +115,4 @@ public class Quote implements Entity<String> {
                 .append("ticker", ticker)
                 .toString();
     }
-
 }

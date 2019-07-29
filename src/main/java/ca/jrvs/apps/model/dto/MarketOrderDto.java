@@ -57,5 +57,4 @@ public class MarketOrderDto {
                 .append("ticker", ticker)
                 .toString();
     }
-
 }

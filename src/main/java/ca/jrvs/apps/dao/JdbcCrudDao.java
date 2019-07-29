@@ -99,7 +99,4 @@ public abstract class JdbcCrudDao <E extends Entity, ID> implements CrudReposito
         logger.info(deleteSql);
         getJdbcTemplate().update(deleteSql, id);
     }
-
-
-
 }

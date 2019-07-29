@@ -29,7 +29,6 @@ public class TraderDao extends JdbcCrudDao<Trader,Integer> {
 
     }
 
-
     @Override
     public JdbcTemplate getJdbcTemplate() {
         return jdbcTemplate;
@@ -52,7 +51,7 @@ public class TraderDao extends JdbcCrudDao<Trader,Integer> {
 
     @Override
     Class getEntityClass() {
-        return TraderDao.class;
+        return Trader.class;
     }
 
     @Override

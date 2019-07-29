@@ -48,11 +48,9 @@ public class PositionDao {
         if ( ticker.isEmpty() || accountId == null){
             throw new IllegalArgumentException("Ticker and account ID cannot be null can't be null");
         }
-        String sql = "SELECT * FROM " + TABLE_NAME + "WHERE " + ID_NAME + " =?" + " AND ticker = ?";
+        String sql = "SELECT * FROM " + TABLE_NAME + " WHERE " + ID_NAME + " =?" + " AND ticker = ?";
     Position position = jdbcTemplate.queryForObject(sql, BeanPropertyRowMapper.newInstance(Position.class), accountId, ticker);
 
     return position;
     }
-
 }
-

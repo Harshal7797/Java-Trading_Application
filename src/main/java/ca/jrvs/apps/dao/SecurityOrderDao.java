@@ -69,6 +69,4 @@ public class SecurityOrderDao extends JdbcCrudDao<SequrityOrder,Integer> {
     public boolean existsById(Integer id) {
         return super.existsById(getIdName(), id);
     }
-
-
 }

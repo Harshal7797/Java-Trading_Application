@@ -110,6 +110,5 @@ public class QuoteService {
     public void updateMarketData() {
         List<Quote> quotes= quoteDao.findAll();
         initQuotes(quotes.stream().map(Quote::getTicker).collect(Collectors.toList()));
-
     }
 }

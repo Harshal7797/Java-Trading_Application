@@ -58,12 +58,10 @@ public class OrderService {
             throw new IllegalArgumentException("orderDto fields cannot be empty");
         }
 
-
         SequrityOrder sequrityOrder = new SequrityOrder();
-
         Account account =accountDao.findById(orderDto.getAccountId());
         Quote quote = quoteDao.findById(orderDto.getTicker());
-        Position position = positionDao.findByTickerAndId(orderDto.getTicker(),orderDto.getAccountId());
+
         sequrityOrder.setTicker(orderDto.getTicker());
         sequrityOrder.setAccountId(orderDto.getAccountId());
         sequrityOrder.setId(sequrityOrder.getId());
@@ -75,7 +73,7 @@ public class OrderService {
             sequrityOrder.setStatus(buyStock(account,quote,orderDto));
         }
         else{
-            sequrityOrder.setStatus(sellStock(account, position,quote,orderDto));
+            sequrityOrder.setStatus(sellStock(account,quote,orderDto));
         }
         securityOrderDao.save(sequrityOrder);
 
@@ -94,9 +92,10 @@ public class OrderService {
         }
 
     }
-    private OrderStatus sellStock( Account account, Position position, Quote quote, MarketOrderDto orderDto){
+    private OrderStatus sellStock( Account account, Quote quote, MarketOrderDto orderDto){
         double toSell = abs(orderDto.getSize())* quote.getAskPrice();
-        if (position.getPosition() > toSell){
+        Position position = positionDao.findByTickerAndId(orderDto.getTicker(),orderDto.getAccountId());
+        if (position.getPosition() > abs(orderDto.getSize())){
             accountDao.updateAmountById(account.getId(),account.getAmount() - toSell);
             return FILLED;
         }
@@ -106,6 +105,5 @@ public class OrderService {
         }
 
     }
-
-    }
+}
 

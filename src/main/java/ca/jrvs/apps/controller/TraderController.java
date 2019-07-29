@@ -24,7 +24,6 @@ public class TraderController {
         this.fundTransferService = fundTransferService;
     }
 
-
     @DeleteMapping (path = "/traderId/{traderId}")
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody

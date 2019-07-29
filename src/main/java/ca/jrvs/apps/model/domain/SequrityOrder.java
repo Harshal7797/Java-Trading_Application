@@ -106,5 +106,4 @@ public class SequrityOrder implements Entity<Integer> {
     public String toString() {
         return new ToStringBuilder(this).append("accountId", accountId).append("id", id).append("notes", notes).append("price", price).append("size", size).append("status", status).append("ticker", ticker).toString();
     }
-
 }

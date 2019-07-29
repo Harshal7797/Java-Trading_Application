@@ -56,5 +56,4 @@ public class SecurityRow {
     public String toString() {
         return new ToStringBuilder(this).append("position", position).append("quote", quote).append("ticker", ticker).toString();
     }
-
 }

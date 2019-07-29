@@ -69,7 +69,7 @@ public class QuoteDao extends JdbcCrudDao<Quote, String> {
 
     @Override
     Class getEntityClass() {
-        return QuoteDao.class;
+        return Quote.class;
     }
 
     @Override
@@ -91,6 +91,4 @@ public class QuoteDao extends JdbcCrudDao<Quote, String> {
     public boolean existsById(String id) {
         return super.existsById(getIdName(), id);
     }
-
-
 }

@@ -45,5 +45,4 @@ public class TraderAccountView {
                 .append("trader", trader)
                 .toString();
     }
-
 }
