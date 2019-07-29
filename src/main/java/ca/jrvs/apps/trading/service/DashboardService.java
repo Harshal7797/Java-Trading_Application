@@ -1,24 +1,21 @@
 package ca.jrvs.apps.trading.service;
 
-import ca.jrvs.apps.dao.*;
+import ca.jrvs.apps.trading.dao.*;
 import ca.jrvs.apps.trading.model.domain.Account;
 import ca.jrvs.apps.trading.model.domain.Position;
 import ca.jrvs.apps.trading.model.domain.Trader;
 import ca.jrvs.apps.trading.model.view.PortfolioView;
 import ca.jrvs.apps.trading.model.view.SecurityRow;
 import ca.jrvs.apps.trading.model.view.TraderAccountView;
-import ca.jrvs.apps.trading.dao.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collections;
 import java.util.List;
 
 @Service
-@Transactional
 public class DashboardService {
 
     private TraderDao traderDao;

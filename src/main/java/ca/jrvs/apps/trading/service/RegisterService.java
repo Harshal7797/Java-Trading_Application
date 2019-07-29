@@ -1,11 +1,10 @@
 package ca.jrvs.apps.trading.service;
 
-import ca.jrvs.apps.dao.*;
+import ca.jrvs.apps.trading.dao.*;
 import ca.jrvs.apps.trading.model.domain.Account;
 import ca.jrvs.apps.trading.model.domain.Position;
 import ca.jrvs.apps.trading.model.domain.Trader;
 import ca.jrvs.apps.trading.model.view.TraderAccountView;
-import ca.jrvs.apps.trading.dao.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
