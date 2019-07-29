@@ -17,7 +17,6 @@ public class OrderController {
     public OrderController(OrderService orderService){
         this.orderService = orderService;
     }
-
     @PostMapping(path = "/marketOrder")
     @ResponseStatus(HttpStatus.CREATED)
     @ResponseBody
