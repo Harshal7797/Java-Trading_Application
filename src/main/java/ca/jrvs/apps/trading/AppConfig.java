@@ -16,9 +16,7 @@ import javax.sql.DataSource;
 @EnableTransactionManagement
 public class AppConfig {
     private Logger logger = LoggerFactory.getLogger(AppConfig.class);
-    private static final String JDBC_URL = System.getenv("PSQL_URL");
-    private static final String DB_USER = System.getenv("PSQL_USER");
-    private static final String DB_PASSWORD = System.getenv("PSQL_PASSWORD");
+
 //    @Value("${iex.host}")
     private String iex_host;
 
@@ -34,6 +32,25 @@ public class AppConfig {
 
     @Bean
     public DataSource dataSource(){
+
+        String JDBC_URL=null;
+        String DB_USER=null;
+        String DB_PASSWORD=null;
+        if(System.getenv("RDS_DB_NAME").isEmpty() && System.getenv("RDS_USERNAME").isEmpty()
+        && System.getenv("RDS_PASSWORD").isEmpty() && System.getenv("RDS_HOSTNAME").isEmpty()
+        && System.getenv("RDS_PORT").isEmpty()){
+            JDBC_URL = "jdbc:postgresql://"+ System.getenv("RDS_HOSTNAME") +":" + System.getenv("RDS_PORT")
+                    + "/" + System.getenv("RDS_DB_NAME");
+            DB_USER = System.getenv("RDS_USERNAME");
+            DB_PASSWORD = System.getenv("RDS_PASSWORD");
+
+
+        }
+        else {
+             JDBC_URL = System.getenv("PSQL_URL");
+              DB_USER = System.getenv("PSQL_USER");
+              DB_PASSWORD = System.getenv("PSQL_PASSWORD");
+        }
         System.out.println("Creating apacheDataSource");
         BasicDataSource basicDataSource = new BasicDataSource();
         basicDataSource.setDriverClassName("org.postgresql.Driver");
