@@ -36,11 +36,10 @@ public class AppConfig {
         String JDBC_URL=null;
         String DB_USER=null;
         String DB_PASSWORD=null;
-        if(System.getenv("RDS_DB_NAME").isEmpty() && System.getenv("RDS_USERNAME").isEmpty()
-        && System.getenv("RDS_PASSWORD").isEmpty() && System.getenv("RDS_HOSTNAME").isEmpty()
-        && System.getenv("RDS_PORT").isEmpty()){
+        if(!System.getenv("RDS_DB_NAME").isEmpty()) {
             JDBC_URL = "jdbc:postgresql://"+ System.getenv("RDS_HOSTNAME") +":" + System.getenv("RDS_PORT")
-                    + "/" + System.getenv("RDS_DB_NAME");
+                    + "/" + "jrvstrading";
+            logger.info("JDBC URL: " + JDBC_URL);
             DB_USER = System.getenv("RDS_USERNAME");
             DB_PASSWORD = System.getenv("RDS_PASSWORD");
 
