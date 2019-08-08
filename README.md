@@ -62,7 +62,7 @@ This controller is designed to check if the Spring Booth is running or not and h
   - `Service` : This component is knows as Business logic. In computer software a business logic is the part of program that encodes the real-world` business rules` that determines how data can be created, stored and changed.`Business Rules` describe the operation, definitions and constraints that apply to an organization.
   - `Dao` : Data Access Object which handles various object. DAO is used to map the retrieved information from `IEX Cloud` and then latter use it to persist data into `PSQL` database. 
   - `SpringBoot: webservlet/TomCat and IoC` : Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run". Tomcat manages the mapping from swagger Ui to your application so correct request get executed. Inversion of Control is a principle in software engineering by which the control of objects or portions of a program is transferred to a container or framework. It’s most often used in the context of object-oriented programming.
-  - `PSQL` - PostgrSQL, also know as postgres, is a free and open-source relational database management system. It contains the information for trader, account, how many stock he holds
+  - `PSQL` - PostgrSQL, also know as postgres, is a free and open-source relational database management system. It contains the information for trader, account, how many stock he/she holds and daily list of quote which is retrieved from IEX cloud.
   - `RDBMS`. It takes the information from DAO and store it into `PSQL` database using DataSouce (JDBC Connection). 
   - `IEX`  - Investors  Exchange is a stock exchange based in United States. For this Application we use `IEX Cloud` is a flexible financial data platform connecting a wide array of developers with curated financial data. It also offers an API service, allowing developers to query US and Canadian Stock Data. 
   
@@ -73,11 +73,11 @@ This controller is designed to check if the Spring Booth is running or not and h
 4.
 5.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzU2MTUyNzUsMTY3MzkxOTQsNzAxNj
-kxNDQzLDEyNTUwOTk4MDksNzYwNDg4MjcsMTc2ODU2MzU3NSwt
-OTYxNDc3NjE0LDQzNjE0NTY0MCw2MTkzMDU1OTcsLTE5NTMxOT
-E0OTYsLTc4NTUyODExOCwtMTA4OTI4ODE3NCwtMTk1ODg5MzYz
-MSwxNTE0MDE5MjQ4LDE2OTQ4MTEyNDIsOTM1OTMxNTY1LDE0OT
-Y1NzAzMjgsLTE4MzE3NjQ3MjEsLTg1ODkyNTE4NiwtMTE2MTkx
-MTc2XX0=
+eyJoaXN0b3J5IjpbLTQ1NTg5Njg3NywxNjczOTE5NCw3MDE2OT
+E0NDMsMTI1NTA5OTgwOSw3NjA0ODgyNywxNzY4NTYzNTc1LC05
+NjE0Nzc2MTQsNDM2MTQ1NjQwLDYxOTMwNTU5NywtMTk1MzE5MT
+Q5NiwtNzg1NTI4MTE4LC0xMDg5Mjg4MTc0LC0xOTU4ODkzNjMx
+LDE1MTQwMTkyNDgsMTY5NDgxMTI0Miw5MzU5MzE1NjUsMTQ5Nj
+U3MDMyOCwtMTgzMTc2NDcyMSwtODU4OTI1MTg2LC0xMTYxOTEx
+NzZdfQ==
 -->
