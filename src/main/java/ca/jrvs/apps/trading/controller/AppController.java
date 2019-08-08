@@ -15,6 +15,6 @@ public class AppController {
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
     public String getHealth(){
-        return "I am Up and Running";
+        return "I am Up and Running 2";
     }
 }

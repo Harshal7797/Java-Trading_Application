@@ -4,10 +4,7 @@ import ca.jrvs.apps.trading.dao.AccountDao;
 import ca.jrvs.apps.trading.dao.PositionDao;
 import ca.jrvs.apps.trading.dao.QuoteDao;
 import ca.jrvs.apps.trading.dao.SecurityOrderDao;
-import ca.jrvs.apps.trading.model.domain.Account;
-import ca.jrvs.apps.trading.model.domain.OrderStatus;
-import ca.jrvs.apps.trading.model.domain.Quote;
-import ca.jrvs.apps.trading.model.domain.SequrityOrder;
+import ca.jrvs.apps.trading.model.domain.*;
 import ca.jrvs.apps.trading.model.dto.MarketOrderDto;
 import org.junit.Before;
 import org.junit.Test;
@@ -57,6 +54,7 @@ public class OrderServiceTest {
     public void executeMarketOrderHappyPath() {
         when(quoteDao.existsById(orderDto.getTicker())).thenReturn(true);
         when(accountDao.existsById(orderDto.getAccountId())).thenReturn(true);
+
         Quote quote = new Quote();
         quote.setAskSize(10);
         quote.setAskPrice(100.00);
@@ -65,8 +63,7 @@ public class OrderServiceTest {
         Account account = new Account();
         account.setAmount(100.00);
         account.setId(orderDto.getAccountId());
-        //accountDao.findByIdForUpdate equivalents accountDao.findById
-        when(accountDao.findByIdForUpdate(orderDto.getAccountId())).thenReturn(account);
+        when(accountDao.findById(orderDto.getAccountId())).thenReturn(account);
 
         orderService.executeMarketOrder(orderDto);
         verify(securityOrderDao).save(captorSecurityOrder.capture());
@@ -76,7 +73,83 @@ public class OrderServiceTest {
 
     @Test
     public void executeMarketOrderSadPath() {
-        //write more tests
+        when(quoteDao.existsById(orderDto.getTicker())).thenReturn(true);
+        when(accountDao.existsById(orderDto.getAccountId())).thenReturn(true);
+
+        Quote quote = new Quote();
+        quote.setAskSize(10);
+        quote.setAskPrice(100.00);
+        when(quoteDao.findById(orderDto.getTicker())).thenReturn(quote);
+
+        Account account = new Account();
+        account.setAmount(40.00);
+        account.setId(orderDto.getAccountId());
+        when(accountDao.findById(orderDto.getAccountId())).thenReturn(account);
+
+        orderService.executeMarketOrder(orderDto);
+        verify(securityOrderDao).save(captorSecurityOrder.capture());
+        SequrityOrder captorOrder = captorSecurityOrder.getValue();
+        assertEquals(OrderStatus.CANCELED, captorOrder.getStatus());
+
+    }
+@Test
+    public void sellHappy(){
+
+        when(quoteDao.existsById(orderDto.getTicker())).thenReturn(true);
+        when(accountDao.existsById(orderDto.getAccountId())).thenReturn(true);
+
+        Quote quote = new Quote();
+        quote.setAskSize(10);
+        quote.setAskPrice(100.00);
+        when(quoteDao.findById(orderDto.getTicker())).thenReturn(quote);
+
+        Account account = new Account();
+        account.setAmount(40.00);
+        account.setId(orderDto.getAccountId());
+        when(accountDao.findById(orderDto.getAccountId())).thenReturn(account);
+
+        orderDto.setSize(-5);
+
+        Position position =new Position();
+        position.setAccountId(account.getId());
+        position.setPosition(10);
+        position.setTicker(orderDto.getTicker());
+        when(positionDao.findByTickerAndId(orderDto.getTicker(),orderDto.getAccountId())).thenReturn(position);
+
+        orderService.executeMarketOrder(orderDto);
+        verify(securityOrderDao).save(captorSecurityOrder.capture());
+        SequrityOrder captorOrder = captorSecurityOrder.getValue();
+        assertEquals(OrderStatus.FILLED, captorOrder.getStatus());
+
+    }
+
+    @Test
+    public void sellSad(){
+        when(quoteDao.existsById(orderDto.getTicker())).thenReturn(true);
+        when(accountDao.existsById(orderDto.getAccountId())).thenReturn(true);
+
+        Quote quote = new Quote();
+        quote.setAskSize(10);
+        quote.setAskPrice(100.00);
+        when(quoteDao.findById(orderDto.getTicker())).thenReturn(quote);
+
+        Account account = new Account();
+        account.setAmount(40.00);
+        account.setId(orderDto.getAccountId());
+        when(accountDao.findById(orderDto.getAccountId())).thenReturn(account);
+
+        orderDto.setSize(-5);
+
+        Position position =new Position();
+        position.setAccountId(account.getId());
+        position.setPosition(4);
+        position.setTicker(orderDto.getTicker());
+        when(positionDao.findByTickerAndId(orderDto.getTicker(),orderDto.getAccountId())).thenReturn(position);
+
+        orderService.executeMarketOrder(orderDto);
+        verify(securityOrderDao).save(captorSecurityOrder.capture());
+        SequrityOrder captorOrder = captorSecurityOrder.getValue();
+        assertEquals(OrderStatus.CANCELED, captorOrder.getStatus());
 
     }
 
