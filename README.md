@@ -61,7 +61,7 @@ This controller is designed to check if the Spring Booth is running or not and h
   - `Controller` : Parse user inputs and then calls the corresponding service method.
   - `Service` : This component is knows as Business logic. In computer software a business logic is the part of program that encodes the real-world` business rules` that determines how data can be created, stored and changed.`Business Rules` describe the operation, definitions and constraints that apply to an organization.
   - `Dao` : Data Access Object which handles various object. DAO is used to map the retrieved information from `IEX Cloud` and then latter use it to persist data into `PSQL` database. 
-  - `SpringBoot: webservlet/TomCat and IoC` : Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".
+  - `SpringBoot: webservlet/TomCat and IoC` : Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run". Tomcat manages the mapping from swagger Ui to your application so correct request get executed.
   - `PSQL` - PostgrSQL, also know as postgres, is a free and open-source relational database management system `RDBMS`. It takes the information from DAO and store it into `PSQL` database using DataSouce (JDBC Connection). 
   - `IEX`  - Investors  Exchange is a stock exchange based in United States. For this Application we use `IEX Cloud` is a flexible financial data platform connecting a wide array of developers with curated financial data. It also offers an API service, allowing developers to query US and Canadian Stock Data. 
   
@@ -72,11 +72,11 @@ This controller is designed to check if the Spring Booth is running or not and h
 4.
 5.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAxNjkxNDQzLDEyNTUwOTk4MDksNzYwND
-g4MjcsMTc2ODU2MzU3NSwtOTYxNDc3NjE0LDQzNjE0NTY0MCw2
-MTkzMDU1OTcsLTE5NTMxOTE0OTYsLTc4NTUyODExOCwtMTA4OT
-I4ODE3NCwtMTk1ODg5MzYzMSwxNTE0MDE5MjQ4LDE2OTQ4MTEy
-NDIsOTM1OTMxNTY1LDE0OTY1NzAzMjgsLTE4MzE3NjQ3MjEsLT
-g1ODkyNTE4NiwtMTE2MTkxMTc2LDYwMTAzNzYxOCwtMTk5NjQw
-MzE5MF19
+eyJoaXN0b3J5IjpbLTE1ODE2NjA1MDgsNzAxNjkxNDQzLDEyNT
+UwOTk4MDksNzYwNDg4MjcsMTc2ODU2MzU3NSwtOTYxNDc3NjE0
+LDQzNjE0NTY0MCw2MTkzMDU1OTcsLTE5NTMxOTE0OTYsLTc4NT
+UyODExOCwtMTA4OTI4ODE3NCwtMTk1ODg5MzYzMSwxNTE0MDE5
+MjQ4LDE2OTQ4MTEyNDIsOTM1OTMxNTY1LDE0OTY1NzAzMjgsLT
+E4MzE3NjQ3MjEsLTg1ODkyNTE4NiwtMTE2MTkxMTc2LDYwMTAz
+NzYxOF19
 -->
