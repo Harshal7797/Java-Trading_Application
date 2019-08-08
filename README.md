@@ -16,6 +16,9 @@
   SPRING_PROFILES_ACTIVE dev
   IEX_PUB_TOKEN your_iex_token
   ```
+  Swagger UI page
+  ![Swagger](https://user-images.githubusercontent.com/51926543/62734931-1c56f680-b9f8-11e9-8d36-680522b6ec6c.jpg)
+
 - How to consume REST API? (Swagger screenshot and postman with OpenAPI Specification, e.g. [http://35.231.122.184:5000/v2/api-docs](http://35.231.122.184:5000/v2/api-docs)  
   
 # REST API Usage  
@@ -66,11 +69,11 @@ This controller is designed to check if the Spring Booth is running or not and h
 4.
 5.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE5MzA1NTk3LC0xOTUzMTkxNDk2LC03OD
-U1MjgxMTgsLTEwODkyODgxNzQsLTE5NTg4OTM2MzEsMTUxNDAx
-OTI0OCwxNjk0ODExMjQyLDkzNTkzMTU2NSwxNDk2NTcwMzI4LC
-0xODMxNzY0NzIxLC04NTg5MjUxODYsLTExNjE5MTE3Niw2MDEw
-Mzc2MTgsLTE5OTY0MDMxOTAsLTE4OTQ2Njk3NjQsLTEwMzg5Nj
-UyOTYsLTE4MzU2NzIwNzAsODUwNjYzOTUwLC0zMDU4MjIwMzIs
-MTc4MDI5ODkxNF19
+eyJoaXN0b3J5IjpbNDM2MTQ1NjQwLDYxOTMwNTU5NywtMTk1Mz
+E5MTQ5NiwtNzg1NTI4MTE4LC0xMDg5Mjg4MTc0LC0xOTU4ODkz
+NjMxLDE1MTQwMTkyNDgsMTY5NDgxMTI0Miw5MzU5MzE1NjUsMT
+Q5NjU3MDMyOCwtMTgzMTc2NDcyMSwtODU4OTI1MTg2LC0xMTYx
+OTExNzYsNjAxMDM3NjE4LC0xOTk2NDAzMTkwLC0xODk0NjY5Nz
+Y0LC0xMDM4OTY1Mjk2LC0xODM1NjcyMDcwLDg1MDY2Mzk1MCwt
+MzA1ODIyMDMyXX0=
 -->
