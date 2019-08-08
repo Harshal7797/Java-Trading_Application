@@ -45,13 +45,13 @@ Order Controller is used to buy/sell stock from user defined company such as `AA
   - POST `/order/marketOrder`:  MarketOrder is a `JSON POGO` that contains `accountId, size and ticker`. AccountId is from the user buying/selling the stock, Size is how much he/she wants to buy and ticker is company code such as for Apple `AAPL` to buy the stock from.
 ## Dashboard Controller
 This controller is designed to check if the Spring Booth is running or not and has only one endpoints.
-- GET `/health` to make sure SpringBoot app is up and running  
+- GET `/app/health` to make sure SpringBoot app is up and running  
 
   
 # Architecture  
 - Trading Application Workflow
+![Trading](https://user-images.githubusercontent.com/51926543/62731680-b6b33c00-b9f0-11e9-8a47-78a3489c8411.png)
 
-- briefly explain the following logic layers or components (3-5 sentences for each)  
   - `Controller` : Parse user inputs and then calls the corresponding service method.
   - `Service` : This component is knows as Business logic. In computer software a business logic is the part of program that encodes the real-world` business rules` that determines how data can be created, stored and changed.`Business Rules` describe the operation, definitions and constraints that apply to an organization.
   - `Dao` : Data Access Object which handles various object. DAO is used to map the retrieved information from `IEX Cloud` and then latter use it to persist data into `PSQL` database. 
@@ -66,11 +66,11 @@ This controller is designed to check if the Spring Booth is running or not and h
 4.
 5.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTMxOTE0OTYsLTc4NTUyODExOCwtMT
-A4OTI4ODE3NCwtMTk1ODg5MzYzMSwxNTE0MDE5MjQ4LDE2OTQ4
-MTEyNDIsOTM1OTMxNTY1LDE0OTY1NzAzMjgsLTE4MzE3NjQ3Mj
-EsLTg1ODkyNTE4NiwtMTE2MTkxMTc2LDYwMTAzNzYxOCwtMTk5
-NjQwMzE5MCwtMTg5NDY2OTc2NCwtMTAzODk2NTI5NiwtMTgzNT
-Y3MjA3MCw4NTA2NjM5NTAsLTMwNTgyMjAzMiwxNzgwMjk4OTE0
-LDIwNDQwODQxXX0=
+eyJoaXN0b3J5IjpbNjE5MzA1NTk3LC0xOTUzMTkxNDk2LC03OD
+U1MjgxMTgsLTEwODkyODgxNzQsLTE5NTg4OTM2MzEsMTUxNDAx
+OTI0OCwxNjk0ODExMjQyLDkzNTkzMTU2NSwxNDk2NTcwMzI4LC
+0xODMxNzY0NzIxLC04NTg5MjUxODYsLTExNjE5MTE3Niw2MDEw
+Mzc2MTgsLTE5OTY0MDMxOTAsLTE4OTQ2Njk3NjQsLTEwMzg5Nj
+UyOTYsLTE4MzU2NzIwNzAsODUwNjYzOTUwLC0zMDU4MjIwMzIs
+MTc4MDI5ODkxNF19
 -->
