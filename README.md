@@ -20,8 +20,8 @@
 ![Swagger](https://user-images.githubusercontent.com/51926543/62734931-1c56f680-b9f8-11e9-8d36-680522b6ec6c.jpg)
 
 - How to consume REST API? 
-- You can also execute 
-- [http://localhost:8080/v2/api-docs](http://35.231.122.184:5000/v2/api-docs)  
+- You can also execute by importing the api specification using the link to `POSTMAN`
+- [http://localhost:8080/v2/api-docs](http://localhost:8080/v2/api-docs)  
   
 # REST API Usage  
 ## Swagger  
@@ -71,11 +71,11 @@ This controller is designed to check if the Spring Booth is running or not and h
 4.
 5.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2ODU2MzU3NSwtOTYxNDc3NjE0LDQzNj
-E0NTY0MCw2MTkzMDU1OTcsLTE5NTMxOTE0OTYsLTc4NTUyODEx
-OCwtMTA4OTI4ODE3NCwtMTk1ODg5MzYzMSwxNTE0MDE5MjQ4LD
-E2OTQ4MTEyNDIsOTM1OTMxNTY1LDE0OTY1NzAzMjgsLTE4MzE3
-NjQ3MjEsLTg1ODkyNTE4NiwtMTE2MTkxMTc2LDYwMTAzNzYxOC
-wtMTk5NjQwMzE5MCwtMTg5NDY2OTc2NCwtMTAzODk2NTI5Niwt
-MTgzNTY3MjA3MF19
+eyJoaXN0b3J5IjpbLTEzNTcxMDM0MDMsMTc2ODU2MzU3NSwtOT
+YxNDc3NjE0LDQzNjE0NTY0MCw2MTkzMDU1OTcsLTE5NTMxOTE0
+OTYsLTc4NTUyODExOCwtMTA4OTI4ODE3NCwtMTk1ODg5MzYzMS
+wxNTE0MDE5MjQ4LDE2OTQ4MTEyNDIsOTM1OTMxNTY1LDE0OTY1
+NzAzMjgsLTE4MzE3NjQ3MjEsLTg1ODkyNTE4NiwtMTE2MTkxMT
+c2LDYwMTAzNzYxOCwtMTk5NjQwMzE5MCwtMTg5NDY2OTc2NCwt
+MTAzODk2NTI5Nl19
 -->
