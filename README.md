@@ -45,7 +45,7 @@ Order Controller is used to buy/sell stock from user defined company such as `AA
   - POST `/order/marketOrder`:  MarketOrder is a `JSON POGO` that contains `accountId, size and ticker`. AccountId is from the user buying/selling the stock, Size is how much he/she wants to buy and ticker is company code such as for Apple `AAPL` to buy the stock from.
 ## Dashboard Controller
 This controller is designed to check if the Spring Booth is running or not and has only one endpoints.
-- GET `/health` to make sure SpringBoot app is up and running  
+- GET `/app/health` to make sure SpringBoot app is up and running  
 
   
 # Architecture  
@@ -66,7 +66,7 @@ This controller is designed to check if the Spring Booth is running or not and h
 4.
 5.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTgzNjA1NTgzLC0xOTUzMTkxNDk2LC03OD
+eyJoaXN0b3J5IjpbNjE5MzA1NTk3LC0xOTUzMTkxNDk2LC03OD
 U1MjgxMTgsLTEwODkyODgxNzQsLTE5NTg4OTM2MzEsMTUxNDAx
 OTI0OCwxNjk0ODExMjQyLDkzNTkzMTU2NSwxNDk2NTcwMzI4LC
 0xODMxNzY0NzIxLC04NTg5MjUxODYsLTExNjE5MTE3Niw2MDEw
