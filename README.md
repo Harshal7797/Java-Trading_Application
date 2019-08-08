@@ -50,6 +50,7 @@ This controller is designed to check if the Spring Booth is running or not and h
   
 # Architecture  
 - Trading Application Workflow
+![Trading](https://user-images.githubusercontent.com/51926543/62731680-b6b33c00-b9f0-11e9-8a47-78a3489c8411.png)
 
 - briefly explain the following logic layers or components (3-5 sentences for each)  
   - `Controller` : Parse user inputs and then calls the corresponding service method.
@@ -66,11 +67,11 @@ This controller is designed to check if the Spring Booth is running or not and h
 4.
 5.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTMxOTE0OTYsLTc4NTUyODExOCwtMT
-A4OTI4ODE3NCwtMTk1ODg5MzYzMSwxNTE0MDE5MjQ4LDE2OTQ4
-MTEyNDIsOTM1OTMxNTY1LDE0OTY1NzAzMjgsLTE4MzE3NjQ3Mj
-EsLTg1ODkyNTE4NiwtMTE2MTkxMTc2LDYwMTAzNzYxOCwtMTk5
-NjQwMzE5MCwtMTg5NDY2OTc2NCwtMTAzODk2NTI5NiwtMTgzNT
-Y3MjA3MCw4NTA2NjM5NTAsLTMwNTgyMjAzMiwxNzgwMjk4OTE0
-LDIwNDQwODQxXX0=
+eyJoaXN0b3J5IjpbMTY0MjQ3Nzk0OSwtMTk1MzE5MTQ5NiwtNz
+g1NTI4MTE4LC0xMDg5Mjg4MTc0LC0xOTU4ODkzNjMxLDE1MTQw
+MTkyNDgsMTY5NDgxMTI0Miw5MzU5MzE1NjUsMTQ5NjU3MDMyOC
+wtMTgzMTc2NDcyMSwtODU4OTI1MTg2LC0xMTYxOTExNzYsNjAx
+MDM3NjE4LC0xOTk2NDAzMTkwLC0xODk0NjY5NzY0LC0xMDM4OT
+Y1Mjk2LC0xODM1NjcyMDcwLDg1MDY2Mzk1MCwtMzA1ODIyMDMy
+LDE3ODAyOTg5MTRdfQ==
 -->
