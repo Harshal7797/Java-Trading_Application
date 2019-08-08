@@ -69,11 +69,11 @@ This controller is designed to check if the Spring Booth is running or not and h
 # Improvements  
 1. Automate `updateMarketData` so quote list in the database is updated for example Every 5 min 
 2. Allow trader to be notified when certain stock price drop before he/she could losses lot of money
-3. 
+3.  Show Visual Data for Stocks
 4.
 5.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDUyMDQ2MzMsNzQ1ODMzMzQwLC00NT
+eyJoaXN0b3J5IjpbLTEzNTc4Mjk1MTAsNzQ1ODMzMzQwLC00NT
 U4OTY4NzcsMTY3MzkxOTQsNzAxNjkxNDQzLDEyNTUwOTk4MDks
 NzYwNDg4MjcsMTc2ODU2MzU3NSwtOTYxNDc3NjE0LDQzNjE0NT
 Y0MCw2MTkzMDU1OTcsLTE5NTMxOTE0OTYsLTc4NTUyODExOCwt
