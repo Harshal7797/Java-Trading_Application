@@ -52,7 +52,6 @@ This controller is designed to check if the Spring Booth is running or not and h
 - Trading Application Workflow
 ![Trading](https://user-images.githubusercontent.com/51926543/62731680-b6b33c00-b9f0-11e9-8a47-78a3489c8411.png)
 
-- briefly explain the following logic layers or components (3-5 sentences for each)  
   - `Controller` : Parse user inputs and then calls the corresponding service method.
   - `Service` : This component is knows as Business logic. In computer software a business logic is the part of program that encodes the real-world` business rules` that determines how data can be created, stored and changed.`Business Rules` describe the operation, definitions and constraints that apply to an organization.
   - `Dao` : Data Access Object which handles various object. DAO is used to map the retrieved information from `IEX Cloud` and then latter use it to persist data into `PSQL` database. 
@@ -67,11 +66,11 @@ This controller is designed to check if the Spring Booth is running or not and h
 4.
 5.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0MjQ3Nzk0OSwtMTk1MzE5MTQ5NiwtNz
-g1NTI4MTE4LC0xMDg5Mjg4MTc0LC0xOTU4ODkzNjMxLDE1MTQw
-MTkyNDgsMTY5NDgxMTI0Miw5MzU5MzE1NjUsMTQ5NjU3MDMyOC
-wtMTgzMTc2NDcyMSwtODU4OTI1MTg2LC0xMTYxOTExNzYsNjAx
-MDM3NjE4LC0xOTk2NDAzMTkwLC0xODk0NjY5NzY0LC0xMDM4OT
-Y1Mjk2LC0xODM1NjcyMDcwLDg1MDY2Mzk1MCwtMzA1ODIyMDMy
-LDE3ODAyOTg5MTRdfQ==
+eyJoaXN0b3J5IjpbNTgzNjA1NTgzLC0xOTUzMTkxNDk2LC03OD
+U1MjgxMTgsLTEwODkyODgxNzQsLTE5NTg4OTM2MzEsMTUxNDAx
+OTI0OCwxNjk0ODExMjQyLDkzNTkzMTU2NSwxNDk2NTcwMzI4LC
+0xODMxNzY0NzIxLC04NTg5MjUxODYsLTExNjE5MTE3Niw2MDEw
+Mzc2MTgsLTE5OTY0MDMxOTAsLTE4OTQ2Njk3NjQsLTEwMzg5Nj
+UyOTYsLTE4MzU2NzIwNzAsODUwNjYzOTUwLC0zMDU4MjIwMzIs
+MTc4MDI5ODkxNF19
 -->
