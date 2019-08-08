@@ -62,7 +62,8 @@ This controller is designed to check if the Spring Booth is running or not and h
   - `Service` : This component is knows as Business logic. In computer software a business logic is the part of program that encodes the real-world` business rules` that determines how data can be created, stored and changed.`Business Rules` describe the operation, definitions and constraints that apply to an organization.
   - `Dao` : Data Access Object which handles various object. DAO is used to map the retrieved information from `IEX Cloud` and then latter use it to persist data into `PSQL` database. 
   - `SpringBoot: webservlet/TomCat and IoC` : Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run". Tomcat manages the mapping from swagger Ui to your application so correct request get executed. Inversion of Control is a principle in software engineering by which the control of objects or portions of a program is transferred to a container or framework. It’s most often used in the context of object-oriented programming.
-  - `PSQL` - PostgrSQL, also know as postgres, is a free and open-source relational database management system `RDBMS`. It takes the information from DAO and store it into `PSQL` database using DataSouce (JDBC Connection). 
+  - `PSQL` - PostgrSQL, also know as postgres, is a free and open-source relational database management system
+  - `RDBMS`. It takes the information from DAO and store it into `PSQL` database using DataSouce (JDBC Connection). 
   - `IEX`  - Investors  Exchange is a stock exchange based in United States. For this Application we use `IEX Cloud` is a flexible financial data platform connecting a wide array of developers with curated financial data. It also offers an API service, allowing developers to query US and Canadian Stock Data. 
   
 # Improvements  
@@ -72,11 +73,11 @@ This controller is designed to check if the Spring Booth is running or not and h
 4.
 5.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MzYzMTYzNyw3MDE2OTE0NDMsMTI1NT
-A5OTgwOSw3NjA0ODgyNywxNzY4NTYzNTc1LC05NjE0Nzc2MTQs
-NDM2MTQ1NjQwLDYxOTMwNTU5NywtMTk1MzE5MTQ5NiwtNzg1NT
-I4MTE4LC0xMDg5Mjg4MTc0LC0xOTU4ODkzNjMxLDE1MTQwMTky
-NDgsMTY5NDgxMTI0Miw5MzU5MzE1NjUsMTQ5NjU3MDMyOCwtMT
-gzMTc2NDcyMSwtODU4OTI1MTg2LC0xMTYxOTExNzYsNjAxMDM3
-NjE4XX0=
+eyJoaXN0b3J5IjpbMTY3MzkxOTQsNzAxNjkxNDQzLDEyNTUwOT
+k4MDksNzYwNDg4MjcsMTc2ODU2MzU3NSwtOTYxNDc3NjE0LDQz
+NjE0NTY0MCw2MTkzMDU1OTcsLTE5NTMxOTE0OTYsLTc4NTUyOD
+ExOCwtMTA4OTI4ODE3NCwtMTk1ODg5MzYzMSwxNTE0MDE5MjQ4
+LDE2OTQ4MTEyNDIsOTM1OTMxNTY1LDE0OTY1NzAzMjgsLTE4Mz
+E3NjQ3MjEsLTg1ODkyNTE4NiwtMTE2MTkxMTc2LDYwMTAzNzYx
+OF19
 -->
