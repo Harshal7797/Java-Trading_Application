@@ -22,8 +22,8 @@
 - How to consume REST API? 
 - You can also execute `Http` request by importing the api specification using the link to `POSTMAN`
  [http://localhost:8080/v2/api-docs](http://localhost:8080/v2/api-docs)  
+![postman](https://user-images.githubusercontent.com/51926543/62736020-79ec4280-b9fa-11e9-9e6d-3cf908379466.PNG)
 
-  
 # REST API Usage  
 ## Swagger  
 Swagger is an open-source software framework backed by a large ecosystem of tools that helps developers design, build, document, and consume RESTful Web services. API design is prone to errors, and it’s extremely difficult and time-consuming to spot and rectify mistakes when modeling APIs thus using swagger simplify the job of developer who can test their endpoints using swagger graphical user interface (GUI).
@@ -72,11 +72,11 @@ This controller is designed to check if the Spring Booth is running or not and h
 4.
 5.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYwNDg4MjcsMTc2ODU2MzU3NSwtOTYxND
-c3NjE0LDQzNjE0NTY0MCw2MTkzMDU1OTcsLTE5NTMxOTE0OTYs
-LTc4NTUyODExOCwtMTA4OTI4ODE3NCwtMTk1ODg5MzYzMSwxNT
-E0MDE5MjQ4LDE2OTQ4MTEyNDIsOTM1OTMxNTY1LDE0OTY1NzAz
-MjgsLTE4MzE3NjQ3MjEsLTg1ODkyNTE4NiwtMTE2MTkxMTc2LD
-YwMTAzNzYxOCwtMTk5NjQwMzE5MCwtMTg5NDY2OTc2NCwtMTAz
-ODk2NTI5Nl19
+eyJoaXN0b3J5IjpbMTI1NTA5OTgwOSw3NjA0ODgyNywxNzY4NT
+YzNTc1LC05NjE0Nzc2MTQsNDM2MTQ1NjQwLDYxOTMwNTU5Nywt
+MTk1MzE5MTQ5NiwtNzg1NTI4MTE4LC0xMDg5Mjg4MTc0LC0xOT
+U4ODkzNjMxLDE1MTQwMTkyNDgsMTY5NDgxMTI0Miw5MzU5MzE1
+NjUsMTQ5NjU3MDMyOCwtMTgzMTc2NDcyMSwtODU4OTI1MTg2LC
+0xMTYxOTExNzYsNjAxMDM3NjE4LC0xOTk2NDAzMTkwLC0xODk0
+NjY5NzY0XX0=
 -->
